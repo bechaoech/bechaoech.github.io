@@ -1,0 +1,35 @@
+/*
+Read the variables defined in the config.toml file and define the corresponding
+SCSS variables. This is achieved by `resources.ExecuteAsTemplate` in the <head>;
+warnings by a linter that the following is not valid SCSS can be ignored.
+*/
+
+$title-font: {{ .Site.Params.typography.title_font | default "Bree Serif" }};
+$body-font: {{ .Site.Params.typography.body_font | default "Source Sans Pro" }};
+
+// $background-color: {{ .Site.Params.colors.background_color | default "#fcfbf9" }};
+$background-color: {{ .Site.Params.colors.background_color | default "#ffdddd" }};
+$text-color: {{ .Site.Params.colors.text_color | default "#333333" }};
+$link-color: {{ .Site.Params.colors.link_color | default "#e18aaa" }};
+$name-blur-color: {{ .Site.Params.colors.name_blur_color | default "#b3b3b3" }};
+
+$dark-background-color: {{ .Site.Params.colors.dark_background_color | default "#000000" }};
+$dark-text-color: {{ .Site.Params.colors.dark_text_color | default "#ffd1d2" }};
+$dark-name-blur-color: {{ .Site.Params.colors.dark_name_blur_color | default "#6c6c6c" }};
+
+
+
+
+/*
+Load the rest of the stylesheets.
+*/
+
+@import "_default.scss";
+@import "code.scss";
+@import "footer.scss";
+@import "header.scss";
+@import "navigation.scss";
+@import "landing_page.scss";
+@import "main.scss";
+@import "post.scss";
+@import "typography.scss";

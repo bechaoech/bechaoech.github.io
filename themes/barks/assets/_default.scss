@@ -1,0 +1,116 @@
+
+* {
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    background-image: repeating-linear-gradient(90deg, #FDD7F6, #C2E7FA);
+    background-color: $background-color;
+    min-height: 100vh; /* Ensure body covers the full viewport */
+    background-size: cover; /* Optional: Makes sure the gradient covers the entire area */
+	font-family: $body-font, sans-serif;
+	// font-size: 20px;
+	// line-height: 160%;
+	font-size: 16px;
+	line-height: 120%;
+    font-display: swap;
+}
+
+body.dark-theme {
+    background-color: $dark-background-color;
+    background-image: repeating-linear-gradient(90deg, #FDD7F6, #C2E7FA);
+    min-height: 0vh; /* Ensure body covers the full viewport */
+    background-size: cover; /* Optional: Makes sure the gradient covers the entire area */
+    color: $dark-text-color;
+    font-family: $body-font, sans-serif;
+    // font-size: 20px;
+	// line-height: 160%;
+    font-size: 16px;
+	line-height: 120%;
+    font-display: swap;
+}
+
+body.dark-theme main,
+body.dark-theme nav {
+    color: $dark-text-color;
+}
+
+body.dark-theme a {
+    // color: #60c17d;
+    color: transparent;
+    background-image: linear-gradient(180deg, #FDD7F6, #C2E7FA);
+    background-clip: text;
+}
+
+body.dark-theme nav a {
+    color: transparent;
+    background-image: linear-gradient(180deg, #FDD7F6, #C2E7FA);
+    background-clip: text;
+}
+
+body.dark-theme .title {
+    color: $dark-name-blur-color
+}
+
+body.dark-theme footer {
+    color: $dark-text-color;
+    border-top: 1px solid $dark-text-color;
+}
+
+body.dark-theme footer ul li a i,
+body.dark-theme footer a {
+    color: $dark-text-color;
+}
+
+body.dark-theme .namehighlight {
+    // color: $dark-text-color;
+    color: transparent;
+    background-image: linear-gradient(180deg, #FDD7F6, #C2E7FA);
+    background-clip: text;
+}
+
+body.dark-theme .blockquote {
+    // border-left: 4px solid $link-color;
+    border-left: 4px solid transparent; /* Set transparent for border color */
+    border-image: linear-gradient(180deg, #FDD7F6, #C2E7FA); /* Gradient colors */
+    border-image-slice: 1; /* Ensures the gradient is applied */
+    font-style: italic;
+    padding: 0.5em 2em;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+  
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 768px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+    .inner {
+        max-width: 400px;
+    }
+}
