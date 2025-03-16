@@ -1,0 +1,16 @@
+
+{{ if not (eq .Site.Params.navigation.show_navigation false) }}
+<nav>
+    <ul>
+    {{ range .Site.Menus.main }}
+        <li>
+            <strong>
+                <a href="{{ .URL }}" class="{{ if eq .URL $.Page.RelPermalink }}active{{ end }}">
+                    {{ .Name }}
+                </a>
+            </strong>
+        </li>
+    {{ end }}
+    </ul>
+</nav>
+{{ end }}

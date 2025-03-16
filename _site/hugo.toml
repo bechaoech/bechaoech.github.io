@@ -1,0 +1,40 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Thien-Trang Nguyen-Vu'
+theme = 'barks'
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+    [[menu.main]]
+        name = "Publications"
+        url = "/publications/"
+        weight = 2
+    [[menu.main]]
+        name = "Background"
+        url = "/cv/"
+        weight = 3
+
+[params]
+    author = "Thien Trang Nguyen Vu"
+    description = "AI Research Resident at VinAI Research."
+    mainSections = ["posts"]
+
+    [params.social]
+        [params.social.email]
+            name = "E-Mail"
+            class = "fas fa-envelope"
+            url = "mailto:thientrangngv@gmail.com"
+            weight = 1
+        [params.social.github]
+            name = "GitHub"
+            class = "fab fa-github"
+            url = "https://github.com/nguyenvuthientrang"
+            weight = 2
+        [params.social.google_scholar]
+            name = "Google Scholar"
+            class = "ai ai-google-scholar-square"
+            url = "https://scholar.google.com/citations?user=TrSX1n8AAAAJ"
+            weight = 3
