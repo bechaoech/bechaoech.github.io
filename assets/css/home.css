@@ -48,6 +48,7 @@ body{
   position: relative;
   height: 50vh;
   width: 100%;
+  transform: translateY(-8vh); /* Dịch lên trên */
 }
 
 .section {

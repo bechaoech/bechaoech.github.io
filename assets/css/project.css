@@ -901,13 +901,14 @@ SVG ANIMATIONS PROJECT PAGE
 }
 
 .news-container {
-  max-width: 1600px;
-  max-height: 400px; /* Giới hạn chiều cao để tạo thanh cuộn */
-  overflow-y: auto; /* Kích hoạt thanh cuộn dọc */
-  overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+    max-width: 100%; /* Đảm bảo nó không vượt quá chiều rộng màn hình */
+    width: 100%; /* Lấp đầy khung cha */
+    max-height: 400px; /* Giới hạn chiều cao để có thanh cuộn dọc */
+    overflow-y: auto; /* Tạo thanh cuộn dọc */
+    overflow-x: auto; /* Cho phép cuộn ngang nếu cần */
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
 }
