@@ -1,3 +1,7 @@
+html {
+  --col-ray: rgb(0, 0, 0); /* Mặc định là màu đen */
+}
+
 html[data-theme="light"] {
   --bg-col: #fafafa;
   --shadow1: rgba(0, 0, 0, 0.3);
@@ -7,6 +11,7 @@ html[data-theme="light"] {
   --neu-dark: #c3c3c3;
   --neu-color: #c3c3c3;
   --neu-icon: #c3c3c3;
+  --col-ray: rgb(0,0,0);
 }
 
 html[data-theme="dark"] {
@@ -18,7 +23,11 @@ html[data-theme="dark"] {
   --neu-color: white;
   --text: rgba(255, 255, 255, 0.5);
   --neu-icon: whitesmoke;
+  --col-ray: rgb(255,255,0);
 }
+
+
+
 html {
   overflow-x: hidden;
   max-width: 120%;
@@ -912,3 +921,30 @@ SVG ANIMATIONS PROJECT PAGE
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
+@keyframes flicker {
+  0% { opacity: 1; }
+  10% { opacity: 0.3; }
+  20% { opacity: 0.8; }
+  30% { opacity: 1; }
+  40% { opacity: 0.4; }
+  50% { opacity: 1; }
+  60% { opacity: 0.5; }
+  70% { opacity: 1; }
+  80% { opacity: 0.6; }
+  90% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.light-bulb circle {
+  animation: flicker 1s infinite ease-in-out;
+}
+
+.light-ray {
+  animation: flicker 1s infinite ease-in-out;
+  animation-delay: 0.2s;
+  stroke: var(--col-ray) !important;
+}
+/* Đặt mặc định màu tia sáng là đen cho light mode */
+
+
+

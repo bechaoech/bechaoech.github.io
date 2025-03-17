@@ -244,7 +244,7 @@ ul ol {
 }
 
 .heading1 {
-  font-size: 32px;
+  font-size: 48px;
   line-height: 1.2;
   font-weight: bold;
   color: #222;
@@ -252,6 +252,10 @@ ul ol {
   margin-top: 5rem;
   color: var(--text);
 }
+.my_experience {
+  color: rgb(255, 159, 33) !important;
+}
+
 
 @media (min-width: 675px) {
   .heading1 {
