@@ -856,3 +856,58 @@ SVG ANIMATIONS PROJECT PAGE
   animation-duration: 3.3s;
   transform-origin: 785.132px 295.833px;
 }
+.news-container {
+  width: 100%; /* Mở rộng toàn bộ chiều ngang */
+  max-width: none; /* Loại bỏ giới hạn chiều rộng */
+  padding: 20px 40px; /* Giữ khoảng cách nội dung */
+  overflow-x: auto; /* Thêm thanh cuộn ngang nếu nội dung quá dài */
+  white-space: nowrap; /* Giữ nội dung trên một dòng duy nhất */
+}
+
+.news-item p {
+  display: inline-block; /* Giữ mỗi dòng là một khối ngang */
+  white-space: nowrap; /* Không cho phép xuống dòng */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 1.6;
+  word-spacing: 2px; /* Tạo khoảng cách giữa các từ */
+}
+
+.news-item p strong {
+  font-weight: bold;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.news-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-left: 4px; /* Giúp có khoảng cách giữa từ và link */
+}
+
+.news-link:hover {
+  text-decoration: underline;
+}
+.news-item p {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  line-height: 1.8; /* Giữ line-height nhỏ */
+  padding-top: 2.5px; /* Giữ phần trên không bị mất */
+  padding-bottom: 2.5px; /* Giữ phần dưới không bị mất */
+}
+
+.news-container {
+  max-width: 1600px;
+  max-height: 400px; /* Giới hạn chiều cao để tạo thanh cuộn */
+  overflow-y: auto; /* Kích hoạt thanh cuộn dọc */
+  overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu có */
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}

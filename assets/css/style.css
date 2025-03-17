@@ -395,7 +395,7 @@ color: #ffffff !important;
       margin-right: auto;
       bottom: 0;
       width: 32%;
-      border-bottom: 3px solid #6a00bb;
+      border-bottom: 3px solid rgb(255 159 33);
   }
   
   .nav-item-hover::after {
@@ -406,7 +406,7 @@ color: #ffffff !important;
       height: 0.15em;
       bottom: 0;
       width: 0%;
-      background-color: #6a00bb;
+      background-color: rgb(255 159 33);
       transition: all ease-in-out 280ms;
   }
   
@@ -433,10 +433,21 @@ html[light-mode="light"] .nav-link{
   color: #000000 !important;
 }
 html[light-mode="light"] .nav-link:hover{
-  color: 	rgb(106, 0, 187) !important;
+  color: 	#1A73E8 !important;
 }
 html[light-mode="light"] .navbar-brand:hover{
   color: #000000 !important;
+}
+
+html[light-mode="dark"] .navbar-brand:hover{
+  color: 	rgb(255,159,33) !important;
+}
+
+
+/* navbar hover for dark mode */
+
+html[light-mode="dark"] .nav-link:hover{
+  color: 	rgb(255,159,33) !important;
 }
 
 @media (min-width: 992px) {

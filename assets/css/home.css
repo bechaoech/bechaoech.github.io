@@ -830,3 +830,16 @@ a:hover {
 }
 
 
+/* Làm nổi bật tất cả các liên kết khi trỏ chuột vào */
+a:hover {
+  color: orange;
+  text-decoration: underline;
+}
+/* Làm mờ chữ "Duc Anh" nhưng không quá mờ */
+.span-duc-anh {
+  opacity: 0.5; /* Điều chỉnh mức độ rõ nét (có thể thử 0.7 hoặc 0.8) */
+  font-weight: 400; /* Giữ độ đậm bình thường */
+}
+html, body {
+  cursor: auto;
+}
