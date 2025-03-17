@@ -19,7 +19,7 @@ html[data-theme="light"] {
   --col-box-shadow: #000000 2px 2px 4px, #4D4D4D -2px -2px 4px;
   --col-box-shadow-hover: inset #8a7373 2px 2px 4px, inset #4D4D4D -2px -2px 4px;
   --col-bd-icon: transparent;
-  --bg-icon: #fff;
+  --bg-icon: #191919; /* Giữ màu nền giống dark mode */
   --col-icon-twitter: #1da1f2;
   --col-icon-dribbble: #ea4c89;
   --col-icon-linkedin: #0e76a8;
@@ -1092,3 +1092,4 @@ outline: none;
     transform: scale(0) rotateZ(-90deg);
   }
 }
+

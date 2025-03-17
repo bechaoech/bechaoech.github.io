@@ -48,6 +48,8 @@
 </head>
 
 <body class="no-scroll-preload">
+
+
     <!-- loader -->
     <div class="loader-container">
         <div class="atom">
@@ -62,28 +64,29 @@
     <!--Particles effect-->
     <div id="home">
         <section class="center">
+            <div id="particles-js"></div>
         </section>
     </div>
     <center>
         <!-- Home Section -->
-        <div class="container d-flex align-items-center justify-content-center h-100" style="margin-top: -150px;">
+        <div class="container d-flex align-items-center justify-content-center h-100" style="margin-top: -20px;">
 
 
             <div class="row w-100 text-center text-md-left align-items-center">
 
-                <div class="col-md-6">
-                    <h2>Duc Anh Phuc Nguyen</h2>
-                    <p>I was an AI Research Resident at <a href="https://vinai.io/" target="_blank"><strong>VinAI Research, Vietnam</strong></a>, <br> where I worked with 3D scene understanding and multimodal Large Language Models under the supervision of 
+                <div class="col-md-8">
+                    <h1>Duc Anh Phuc Nguyen</h1>
+                    <p>I was an AI Research Resident at <a href="https://vinai.io/" target="_blank"><strong>VinAI Research, Vietnam</strong></a>, where I worked with 3D scene understanding and multimodal Large Language Models under the supervision of 
                         <a href="https://scholar.google.com/citations?user=AnhTranProfile" target="_blank"><strong>Dr. Anh Tran</strong></a> and 
                         <a href="https://scholar.google.com/citations?user=CuongPhamProfile" target="_blank"><strong>Prof. Cuong Pham</strong></a>.</p>
 <p>Previously, I obtained my Bachelor of Computer Science at the 
     <a href="https://uit.edu.vn/" target="_blank" class="highlight"><strong>University of Information Technology - VNUHCM</strong></a>.</p>
-
+        
                     <p style="font-size: 1.2rem;">I am into <span class="animated-text"
                         data-words="Artificial Intelligence, Machine Learning, Computer Vision, Robotics"></span></p>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="assets/images/avatar.png" alt="Thiên Trang" class="rounded-circle img-fluid" width="250">
+                <div class="col-md-4 text-center">
+                    <img src="assets/images/avatar.png" class="rounded-circle img-fluid" width="300">
                 </div>
             </div>
         </div>
@@ -95,63 +98,50 @@
                 <div>
                     <div class="social-icons">
                         <a class="socialicon email" href="mailto:your-email@example.com" target="_blank">
-                            <svg class="email-icon" width="35" height="35" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 6C2 4.9 2.9 4 4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6ZM20 8L12 13L4 8V18H20V8ZM4 6L12 11L20 6H4Z"/>
-                            </svg>
-                        </a>
-                        <a class="socialicon cv" href="https://your-cv-link.com" target="_blank">
-                            <svg class="cv-icon" width="35" height="35" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 2C5.45 2 5 2.45 5 3V21C5 21.55 5.45 22 6 22H18C18.55 22 19 21.55 19 21V7.83C19 7.3 18.79 6.79 18.41 6.41L13.59 1.59C13.21 1.21 12.7 1 12.17 1H6ZM7 4H12V8H17V20H7V4ZM9 10V12H15V10H9ZM9 14V16H13V14H9Z"/>
-                            </svg>
-                        </a>
-                        <a class="socialicon scholar" href="https://scholar.google.com/citations?user=your-id" target="_blank">
-                            <svg class="scholar-icon" width="35" height="35" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2C7.5 2 4 5.5 4 10C4 14 7 17.4 11 17.9V22H5V24H19V22H13V17.9C17 17.4 20 14 20 10C20 5.5 16.5 2 12 2ZM12 4C15.3 4 18 6.7 18 10C18 13.3 15.3 16 12 16C8.7 16 6 13.3 6 10C6 6.7 8.7 4 12 4ZM10 7V9H14V7H10ZM10 11V13H14V11H10Z"/>
+                            <svg class="email-icon" width="35" height="35" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Thân phong bì -->
+                                <path class="envelope-body" d="M2 6h20v12H2z" fill="#D44638"/>
+                                <!-- Nắp phong bì (màu trắng) -->
+                                <path class="envelope-lid" d="M2 6l10 6 10-6V4H2v2z" fill="white"/>
+
                             </svg>
                         </a>
                         
-
-                        <a class="socialicon x-twitter" href="https://twitter.com/yourprofile" target="_blank">
-                            <svg class="x-icon" width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M16.914 3H20.324L13.852 10.59L21.375 21H15.727L10.953 14.506L5.507 21H2.094L9.066 12.914L1.875 3H7.703L12.063 8.927L16.914 3ZM15.855 19H17.562L6.695 4H4.859L15.855 19Z" fill="white"/>
-                            </svg>
-                        </a>
-
                         
-
-                        <a class="socialicon linkedin" href="" target="_blank" rel="author">
-                            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
+                        <a class="socialicon cv" href="your-cv-link.pdf" target="_blank">
+                            <svg class="cv-icon" width="35" height="35" viewBox="0 0 24 24" fill="#1A73E8" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 2h10l4 4v14H6V2zm10 0v4h4m-8 6H8v2h4v-2zm0 4H8v2h4v-2z" />
+                                <path d="M16 2l4 4h-4V2z" fill="white" />
+                                <path d="M8 16h4v2H8v-2z" fill="#1A73E8" />
+                                <path d="M8 12h4v2H8v-2z" fill="#1A73E8" />
                             </svg>
+                        
+                            <!-- Bút chì SVG -->
+                            <svg class="pencil" width="15" height="30" viewBox="0 0 50 100" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="10" y="10" width="10" height="50" fill="yellow" stroke="black" stroke-width="2"/>
+                                <line x1="13" y1="10" x2="13" y2="60" stroke="black" stroke-width="1"/>
+                                <line x1="17" y1="10" x2="17" y2="60" stroke="black" stroke-width="1"/>
+                                <polygon points="10,60 20,60 15,75" fill="black" stroke="black" stroke-width="2"/>
+                                <rect x="10" y="0" width="10" height="10" fill="brown" stroke="black" stroke-width="2"/>
+                                <rect x="10" y="10" width="10" height="3" fill="gray" stroke="black" stroke-width="1"/>
+                            </svg>
+                        
+                            <!-- Chữ "CV" sẽ xuất hiện khi bút viết xong -->
+                            <div class="cv-text">CV</div>
                         </a>
                         
-                        <a class="socialicon codeforces" href="" target="_blank" rel="author">
-                            <svg class="codeforces-icon" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 14 19" width="100" height="100">
-                                <g>
-                                    <rect class="red" x="15" width="2" height="6.5" rx="0.7" y="0" fill="#AE0F0A" />
-                                    <rect class="blue" x="12" width="2" height="6.5" rx="0.7" y="0" fill="#4F81C1" />
-                                    <rect class="yellow" x="9" width="2" height="6.5" rx="0.7" y="0" fill="#FFD400" />
-                                </g>
+                        
+                        
+                        
+                        <!-- Google Scholar -->
+                        <a class="socialicon google-scholar" href="https://scholar.google.com/citations?user=yourprofile" target="_blank">
+                            <svg class="google-scholar-icon" width="35" height="35" viewBox="0 0 64 64" fill="#4285F4" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M32 8L4 24l28 16 28-16L32 8z" fill="#4285F4"/>
+                                <path d="M12 28v12c0 8 8.6 12 20 12s20-4 20-12V28l-4 2v10c0 6-6.2 8-16 8s-16-2-16-8V30l-4-2z" fill="#4285F4"/>
+                                <path d="M48 24v12h4V24h-4z" fill="#4285F4"/>
                             </svg>
                         </a>
-
-                        <a class="socialicon kaggle" href="" target="_blank" rel="author">
-                            <i class="fab fa-kaggle"></i>
-                        </a>
-
-                        <a class="socialicon instagram" href="" target="_blank" rel="author">
-                            <!-- svg code for instagram icon -->
-                            <svg class="instagram-icon" x="0px" y="0px" viewBox="0 0 202.5 202.5" style="enable-background:new 0 0 202.5 202.5;">
-                                <circle id="littleCircle" class="st0" cx="101" cy="101.5" r="18.9" />
-                                <circle id="shutter" class="st0" cx="101" cy="101.5" r="8" />
-                                <circle id="lens" class="st0" cx="125.5" cy="78.6" r="2.9" />
-                                <path id="camera" class="st0" d="M79,60.5h44c10.5,0,19,8.5,19,19v44c0,10.5-8.5,19-19,19H79c-10.5,0-19-8.5-19-19v-44
-                                                                                                        C60,69,68.5,60.5,79,60.5z" />
-                            </svg>
-                        </a>
-
+                
                         <a class="socialicon github" href="" target="_blank" rel="author">
                             <!-- SVG code for Github icon -->
                             <svg class="github-icon" width="45px" height="45px" viewBox="0 0 300 300">
@@ -165,6 +155,58 @@
                                                             c6,5.1,10.8,11.5,13.8,18.8c2.9,7.4,7.7,24.1,41.5,17.8" />
                             </svg>
                         </a>
+                        <a class="socialicon linkedin" href="" target="_blank" rel="author">
+                            <svg class="linkedin-icon" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    <!-- YouTube -->
+                    <a class="socialicon youtube" href="https://www.youtube.com/channel/your-channel" target="_blank">
+                        <svg class="youtube-icon" width="35" height="35" viewBox="0 0 24 24" fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.95C18.24 4 12 4 12 4s-6.24 0-8.59.47a2.78 2.78 0 0 0-1.95 1.95A29.93 29.93 0 0 0 1 12a29.93 29.93 0 0 0 .47 5.58 2.78 2.78 0 0 0 1.95 1.95c2.35.47 8.59.47 8.59.47s6.24 0 8.59-.47a2.78 2.78 0 0 0 1.95-1.95A29.93 29.93 0 0 0 23 12a29.93 29.93 0 0 0-.46-5.58z" />
+                            <path d="M9.75 15.02V8.98l6.5 3.02-6.5 3.02z" fill="white" />
+                        </svg>
+                    </a>
+                        
+
+                        <a class="socialicon x-twitter" href="https://twitter.com/yourprofile" target="_blank">
+                            <svg class="x-icon" width="35" height="35" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.914 3H20.324L13.852 10.59L21.375 21H15.727L10.953 14.506L5.507 21H2.094L9.066 12.914L1.875 3H7.703L12.063 8.927L16.914 3ZM15.855 19H17.562L6.695 4H4.859L15.855 19Z" fill="white"/>
+                            </svg>
+                        </a>
+
+                        
+
+                        
+                        
+                        <a class="socialicon codeforces" href="" target="_blank" rel="author">
+                            <svg class="codeforces-icon" xmlns="http://www.w3.org/2000/svg" viewBox="5 0 14 19" width="100" height="100">
+                                <g>
+                                    <rect class="red" x="15" width="2" height="6.5" rx="0.7" y="0" fill="#AE0F0A" />
+                                    <rect class="blue" x="12" width="2" height="6.5" rx="0.7" y="0" fill="#4F81C1" />
+                                    <rect class="yellow" x="9" width="2" height="6.5" rx="0.7" y="0" fill="#FFD400" />
+                                </g>
+                            </svg>
+                        </a>
+
+                        <!-- <a class="socialicon kaggle" href="" target="_blank" rel="author">
+                            <i class="fab fa-kaggle"></i>
+                        </a> -->
+
+                        <!-- svg code for instagram icon -->
+                        <!-- <a class="socialicon instagram" href="" target="_blank" rel="author">
+                            <svg class="instagram-icon" x="0px" y="0px" viewBox="0 0 202.5 202.5" style="enable-background:new 0 0 202.5 202.5;">
+                                <circle id="littleCircle" class="st0" cx="101" cy="101.5" r="18.9" />
+                                <circle id="shutter" class="st0" cx="101" cy="101.5" r="8" />
+                                <circle id="lens" class="st0" cx="125.5" cy="78.6" r="2.9" />
+                                <path id="camera" class="st0" d="M79,60.5h44c10.5,0,19,8.5,19,19v44c0,10.5-8.5,19-19,19H79c-10.5,0-19-8.5-19-19v-44
+                                                                                                        C60,69,68.5,60.5,79,60.5z" />
+                            </svg>
+                        </a> -->
+
+                        
                     </div>
                 </div>
             </div>
@@ -227,11 +269,15 @@
             typeEffect();
         });
     </script>
+ 
 
     <script src="assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js'></script>
+    <script src="assets/js/particle.js"></script>      
+
 
 </body>
 
