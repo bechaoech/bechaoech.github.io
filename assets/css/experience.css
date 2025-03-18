@@ -60,19 +60,41 @@ section > div {
 }
 @media only screen and (max-width: 767px) {
   section {
-    height: 95vh;
+    min-height: 50vh; /* Giảm chiều cao tối đa */
+    height: auto; /* Để nội dung tự động mở rộng */
   }
 }
 @media only screen and (max-width: 550px) {
   section {
-    height: 90vh;
+    min-height: 50vh;
+    height: auto;
   }
 }
 @media only screen and (max-width: 400px) {
   section {
-    height: 85vh;
+    min-height: 50vh;
+    height: auto;
   }
 }
+@media only screen and (max-width: 767px) {
+  section {
+    min-height: 50vh; /* Giảm chiều cao tối đa */
+    height: auto; /* Để nội dung tự động mở rộng */
+  }
+}
+@media only screen and (max-width: 550px) {
+  section {
+    min-height: 50vh;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  section {
+    min-height: 50vh;
+    height: auto;
+  }
+}
+
 
 .main,
 .main1 {
