@@ -48,14 +48,24 @@ html {
 }
 .research_head {
   font-weight: bold;
+  font-size: 48px; /* Tăng kích thước chữ */
 }
 
 /* color of research page heading*/
 
 .research_work {
   color: #4e00bb;
+  font-size: 48px; /* Tăng kích thước riêng chữ "Work" */
+}
+/* Dark mode: Chữ "Work" chuyển thành màu cam */
+html[light-mode="dark"] .research_work {
+  color: rgb(255, 159, 33); /* Màu cam */
 }
 
+/* Light mode: Chữ "Work" chuyển thành màu xanh dương */
+html[light-mode="light"] .research_work {
+  color: #027bff; /* Màu xanh dương */
+}
 /*For Changing background color of body according to theme*/
 body {
   background: var(--bg-col) !important;
@@ -158,6 +168,7 @@ body {
   vertical-align: top;
   text-align: left;
   width: 70%;
+  /* height: 120px; */
 }
 
 .paperTitle:hover {
@@ -167,7 +178,7 @@ body {
 
 .paperTitle {
   padding: 8px 0;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .researchCitedNumber span,
@@ -288,9 +299,13 @@ body {
 /*IMAGES SECTION OF LIST*/
 
 .rImg {
-  margin-left: 0;
-  border-radius: 10px;
+    width: 100%; /* Hình ảnh tự động mở rộng theo ô chứa */
+    height: 100%; /* Giữ đúng kích thước hình vuông */
+    object-fit: cover; /* Cắt ảnh để vừa với khung mà không bị méo */
+    display: block;
+    border-radius: 15px; /* Giữ bo góc (tùy chỉnh độ cong) */
 }
+
 
 .imgRes {
   width: 14em;
@@ -302,10 +317,18 @@ body {
   margin-bottom: 1em;
 }
 
-.imgCol{
-  width: 30%;
-  height: 335px;
+.imgCol {
+  width: 100%;  /* Đảm bảo khung co giãn theo màn hình */
+  max-width: 335px;  /* Giới hạn chiều rộng tối đa */
+  aspect-ratio: 1 / 1;  /* Luôn giữ khung hình vuông */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Đảm bảo ảnh không bị tràn */
 }
+
+
+
 .imgCol .rImg{
   width: 100%;
   height: 100%;
@@ -395,10 +418,13 @@ body {
 }
 
 /* Button for citing  */
-.d-flex{
+.d-flex {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end; /* Căn sang phải */
+  gap: 10px; /* Khoảng cách giữa các nút */
+  margin-top: -50px; /* Điều chỉnh khoảng cách trên */
 }
+
 
 .button {
   border: 1px solid rgb(231, 85, 109);
@@ -803,4 +829,25 @@ a:hover {
   .researchTitleName {
     width: 60%;
   }
+}
+.research-upper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/* Mặc định cho chữ "Phuc Nguyen" - luôn đậm */
+.authors strong {
+  font-weight: 900;
+}
+
+/* Dark mode: Chữ màu cam */
+html[light-mode="dark"] .authors strong {
+  color: rgb(255, 159, 33); /* Màu cam */
+}
+
+/* Light mode: Chữ màu xanh */
+html[light-mode="light"] .authors strong {
+  color: #027bff; /* Màu xanh */
 }

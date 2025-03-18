@@ -60,10 +60,11 @@ section > div {
 }
 @media only screen and (max-width: 767px) {
   section {
-    min-height: 50vh; /* Giảm chiều cao tối đa */
-    height: auto; /* Để nội dung tự động mở rộng */
+    min-height: auto; /* Cho phép nội dung mở rộng linh hoạt */
+    height: auto;
   }
 }
+
 @media only screen and (max-width: 550px) {
   section {
     min-height: 50vh;
@@ -78,7 +79,7 @@ section > div {
 }
 @media only screen and (max-width: 767px) {
   section {
-    min-height: 50vh; /* Giảm chiều cao tối đa */
+    min-height: auto; /* Giảm chiều cao tối đa */
     height: auto; /* Để nội dung tự động mở rộng */
   }
 }
@@ -96,13 +97,14 @@ section > div {
 }
 
 
-.main,
-.main1 {
-  width: 100%;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  margin: 0 auto;
+@media only screen and (max-width: 767px) {
+  .main,
+  .main1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
+
 
 .section {
   padding: 20px;
@@ -274,9 +276,27 @@ ul ol {
   margin-top: 5rem;
   color: var(--text);
 }
-.my_experience {
-  color: rgb(255, 159, 33) !important;
+@media only screen and (max-width: 767px) {
+  .heading1 {
+    margin-top: 2rem;
+  }
 }
+
+/* Mặc định */
+.my_experience {
+  font-weight: bold;
+}
+
+/* Light mode */
+html[light-mode="light"] .my_experience {
+  color: #027bff !important; /* Xanh dương */
+}
+
+/* Dark mode */
+html[light-mode="dark"] .my_experience {
+  color: rgb(255, 159, 33) !important; /* Cam */
+}
+
 
 
 @media (min-width: 675px) {
