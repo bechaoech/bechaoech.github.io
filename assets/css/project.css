@@ -921,6 +921,12 @@ SVG ANIMATIONS PROJECT PAGE
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
 }
+.news-link:hover {
+  color: rgb(255, 159, 33); /* Chuyển sang màu cam khi trỏ chuột vào */
+  text-decoration: underline; /* Gạch chân để nhấn mạnh */
+  
+}
+
 @keyframes flicker {
   0% { opacity: 1; }
   10% { opacity: 0.3; }
@@ -934,17 +940,35 @@ SVG ANIMATIONS PROJECT PAGE
   90% { opacity: 1; }
   100% { opacity: 0.4; }
 }
-
-.light-bulb circle {
+/* Khi bật công tắc, bóng đèn nhấp nháy */
+.switch-on #bulb {
   animation: flicker 1s infinite ease-in-out;
 }
 
+/* Khi bật công tắc, tia sáng nhấp nháy */
+.switch-on .light-ray {
+  display: block; /* Hiển thị tia sáng */
+  animation: flicker 1s infinite ease-in-out;
+}
+
+/* Công tắc bật thì nút di chuyển */
+.switch-on .toggle-button {
+  transform: translateX(20px);
+}
+
+/* Khi bật công tắc, nền công tắc đổi màu xanh */
+.switch-on #switch-background {
+  fill: green;
+}
+
+/* Khi tắt công tắc, bóng đèn không nhấp nháy */
+#bulb {
+  fill: gray; /* Màu xám khi tắt */
+  animation: none;
+}
+
+/* Khi tắt công tắc, tia sáng ẩn đi */
 .light-ray {
-  animation: flicker 1s infinite ease-in-out;
-  animation-delay: 0.2s;
-  stroke: var(--col-ray) !important;
+  display: none;
+  animation: none;
 }
-/* Đặt mặc định màu tia sáng là đen cho light mode */
-
-
-

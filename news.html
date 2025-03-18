@@ -70,7 +70,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="width: 100%; min-height: 80vh;"> 
     <div class="news-container p-4" style="max-width: 1600px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); backdrop-filter: blur(10px);">
         <h2 class="font-weight-bold text-center mb-4" data-aos="fade-down">
-            <svg class="light-bulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80">
+            <svg id="bulb" class="light-bulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="80" height="80">
                 <!-- Tia sáng xung quanh bóng đèn ngắn hơn -->
                 <line class="light-ray" x1="32" y1="12" x2="32" y2="4" stroke="black" stroke-width="2"/>
                 <line class="light-ray" x1="32" y1="52" x2="32" y2="60" stroke="black" stroke-width="2"/>
@@ -91,6 +91,20 @@
                 <path d="M32 57 L32 70" stroke="black" stroke-width="2"/>
             </svg>
             News
+            <!-- SVG Công tắc với chữ ON/OFF -->
+<svg id="toggle-switch" width="50" height="30" viewBox="0 0 50 30" xmlns="http://www.w3.org/2000/svg" style="margin-left: 15px; cursor: pointer;">
+    <!-- Nền công tắc -->
+     
+    <rect width="50" height="30" rx="15" fill="#bbb" />
+    <rect id="switch-background" width="50" height="30" rx="15" fill="#bbb" />
+
+    <!-- Nút tròn -->
+    <circle cx="15" cy="15" r="12" fill="white" stroke="black" stroke-width="2" class="toggle-button"/>
+
+    
+</svg>
+
+
         </h2>
         
         
@@ -98,25 +112,25 @@
         
         
       <div class="news-item" data-aos="fade-up" data-aos-delay="100">
-          <p><strong>📌 Feb 2025:</strong> <a href="#" class="news-link">Any3DIS</a> has been accepted to CVPR 2025, concluding my two-year journey at VinAI. Cheerz!</p>
+          <p><strong>📌 Feb 2025:</strong> <a href="https://any3dis.github.io/" class="news-link">Any3DIS</a> has been accepted to CVPR 2025, concluding my two-year journey at VinAI. Cheerz!</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="200">
-          <p><strong>🚀 Jul 2024:</strong> <a href="#" class="news-link">VinMap</a> has been accepted to MAPR 2024. We have also released the <a href="#" class="news-link">dataset</a>.</p>
+          <p><strong>🚀 Jul 2024:</strong> <a href="https://github.com/VinAIResearch/VinMap" class="news-link">VinMap</a> has been accepted to MAPR 2024. We have also released the <a href="https://github.com/VinAIResearch/VinMap/blob/main/docs/dataset.md" class="news-link">dataset</a>.</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="300">
-          <p><strong>🏆 Jun 2024:</strong> VinAI-3DIS team has ranked top 1 in <a href="#" class="news-link">OpenSUN3D challenge</a> at CVPR 2024.</p>
+          <p><strong>🏆 Jun 2024:</strong> VinAI-3DIS team has ranked top 1 in <a href="https://opensun3d.github.io/index_cvpr24.html" class="news-link">OpenSUN3D challenge</a> at CVPR 2024.</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="400">
-          <p><strong>💡 Feb 2024:</strong> <a href="#" class="news-link">Open3DIS</a> has been accepted to CVPR 2024. We have also released the <a href="#" class="news-link">code</a>.</p>
+          <p><strong>💡 Feb 2024:</strong> <a href="https://open3dis.github.io/" class="news-link">Open3DIS</a> has been accepted to CVPR 2024. We have also released the <a href="#" class="news-link">code</a>.</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="500">
-          <p><strong>🥈 Oct 2023:</strong> VinAI-3DIS team ranked top 2 in <a href="#" class="news-link">OpenSUN3D challenge</a> at ICCV 2023. We also released the <a href="#" class="news-link">technical report</a>.</p>
+          <p><strong>🥈 Oct 2023:</strong> VinAI-3DIS team ranked top 2 in <a href="https://opensun3d.github.io/index_iccv23.html" class="news-link">OpenSUN3D challenge</a> at ICCV 2023. We also released the <a href="https://arxiv.org/abs/2402.15321" class="news-link">technical report</a>.</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="600">
-          <p><strong>🎓 Nov 2023:</strong> I earned my B.S. in Computer Science at <a href="#" class="news-link">VNUHCM-UIT</a>.</p>
+          <p><strong>🎓 Nov 2023:</strong> I earned my B.S. in Computer Science at <a href="https://en.uit.edu.vn/" class="news-link">VNUHCM-UIT</a>.</p>
       </div>
       <div class="news-item" data-aos="fade-up" data-aos-delay="700">
-          <p><strong>🔬 Feb 2023:</strong> I joined <a href="#" class="news-link">VinAI Research</a> as a Research Resident.</p>
+          <p><strong>🔬 Feb 2023:</strong> I joined <a href="https://www.vinai.io/" class="news-link">VinAI Research</a> as a Research Resident.</p>
       </div>
   </div>
 </div>
@@ -135,7 +149,44 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/project.js"></script>
     
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    const lightSwitch = document.getElementById('toggle-switch'); // Công tắc
+    const bulb = document.getElementById('bulb');  // Bóng đèn
+    const lightRays = document.querySelectorAll('.light-ray'); // Tia sáng
 
+    let isLightOn = false; // Trạng thái ban đầu là TẮT
+
+    lightSwitch.addEventListener('click', () => {
+        isLightOn = !isLightOn; // Đảo trạng thái công tắc
+        lightSwitch.classList.toggle('switch-on'); // Thêm/xóa class switch-on
+
+        if (isLightOn) {
+            // Bật bóng đèn và tia sáng, áp dụng hiệu ứng nhấp nháy
+            bulb.style.fill = 'yellow';
+            bulb.style.animation = 'flicker 1s infinite ease-in-out';
+            lightRays.forEach(ray => {
+                ray.style.display = 'block';
+                ray.style.animation = 'flicker 1s infinite ease-in-out';
+            });
+        } else {
+            // Tắt bóng đèn và tia sáng, xóa hiệu ứng nhấp nháy
+            bulb.style.fill = 'gray';
+            bulb.style.animation = 'none';
+            lightRays.forEach(ray => {
+                ray.style.display = 'none';
+                ray.style.animation = 'none';
+            });
+        }
+    });
+});
+
+
+</script>
+
+      </script>
+      
+      
     
 </body>
 
