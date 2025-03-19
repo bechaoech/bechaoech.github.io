@@ -34,22 +34,28 @@ html {
 
 .education_head {
   font-weight: bold;
+  font-size: 48px; /* Tăng kích thước chữ */
 }
 
 /*color of education page heading*/
 
-.edu_background {
-  color: #4e00bb;
+html[light-mode="light"] .edu_background {
+  color: #027bff; /* Màu xanh khi ở Light Mode */
 }
+
+html[light-mode="dark"] .edu_background {
+  color: rgb(255, 159, 33); /* Màu cam khi ở Dark Mode */
+}
+
 
 /* -----Education Section CSS----- */
 
  @media (max-width: 767px) {
   .dropdown1 {
-    position: absolute;
+    position: relative;
     text-align: center;
     padding-right: 1.2rem;
-    z-index: 3;
+    z-index: 1;
     padding-left: 3.5%;
   }
   .dropdown2 {
@@ -207,13 +213,7 @@ p {
   padding: 1px;
 }
 /* SVG animation */
-#Girl {
-  animation: swing ease-in-out 1s infinite alternate;
-  transform-origin: center -20px;
-  transform-box: fill-box;
-  float: left;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
+
 @keyframes swing {
   0% {
     transform: rotate(9deg);
@@ -222,64 +222,9 @@ p {
     transform: rotate(-9deg);
   }
 }
-#Vector_38 {
-  animation: swing ease-in-out 1s infinite alternate;
-  transform-origin: center 0px;
-  transform-box: fill-box;
-  float: left;
-}
-#Vector_39 {
-  animation: swing ease-in-out 1s infinite alternate;
-  transform-origin: center 0px;
-  transform-box: fill-box;
-  float: left;
-}
-#Vector_40 {
-  animation: swing ease-in-out 1s infinite alternate;
-  transform-origin: center -20px;
-  transform-box: fill-box;
-  float: left;
-}
-#leaf12 {
-  -webkit-animation: shake-bottom 9s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite both;
-  animation: shake-bottom 9s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
-#leaf13 {
-  -webkit-animation: shake-bottom 8s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite both;
-  animation: shake-bottom 8s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
-#lef14 {
-  -webkit-animation: shake-bottom 7.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite both;
-  animation: shake-bottom 7.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
-#leaf15 {
-  -webkit-animation: shake-bottom 7s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite both;
-  animation: shake-bottom 7s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
-#leaf16 {
-  -webkit-animation: shake-bottom 6.5s cubic-bezier(0.455, 0.03, 0.515, 0.955)
-    infinite both;
-  animation: shake-bottom 6.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
-#leaf17 {
-  animation: shake-bottom 6s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite
-    both;
-  transform-box: fill-box;
-}
+
+
+
 @-webkit-keyframes shake-bottom {
   0%,
   100% {
@@ -389,7 +334,7 @@ header p {
   content: "";
   background: #C5CAE9;
   width: 5px;
-  height: 95%;
+  height: 85%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -451,6 +396,7 @@ header p {
   align-items: center;
    background-image: linear-gradient(147deg, #545b62a8, black);
   color: white;
+  
 }
 
 .timeline-content::after {
@@ -544,7 +490,7 @@ blockquote {
   color: #FFFFFF;
   padding: 10px;
   position: absolute;
-  top: 0;
+  top: 5;
   right: 0;
 }
 
@@ -648,12 +594,16 @@ blockquote {
     font-size: 152%;
   }
   .timelineHeading2{
-    font-size: 131%;
+    font-size: 152%;
   font-weight: bolder;
   }
-  .timelineHeading3{
-    font-size: 2.9ch;
+  @media (max-width: 1200px) {
+    .timelineHeading3 {
+      font-size: 152%; /* Dùng % để có thể thu nhỏ khi màn hình co lại */
+      font-weight: bold;
+    }
   }
+  
 }
 
 @media (max-width: 991px){
@@ -848,3 +798,19 @@ blockquote {
       text-align: center;
     }
   }
+  .school-name {
+    font-size: 85%; /* Giảm kích thước riêng dòng này */
+  }
+  
+  .university-name {
+    font-size: 85%; /* Giữ kích thước lớn hơn để nổi bật */
+  }
+  .uni-name {
+    font-size: 85%; /* Kích thước riêng cho University of Information Technology */
+   
+}
+
+.vnu-name {
+    font-size: 85%; /* Kích thước riêng cho Vietnam National University */
+    
+}

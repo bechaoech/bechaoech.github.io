@@ -120,9 +120,7 @@ section > div {
 }
 
 /*color of experience page headings*/
-.my_experience {
-  color: #4e00bb;
-}
+
 
 .sub-heading {
   font-size: 17px;
@@ -278,7 +276,7 @@ ul ol {
 }
 @media only screen and (max-width: 767px) {
   .heading1 {
-    margin-top: 2rem;
+    margin-top: -20rem;
   }
 }
 
@@ -301,7 +299,7 @@ html[light-mode="dark"] .my_experience {
 
 @media (min-width: 675px) {
   .heading1 {
-    margin-top: 5em;
+    margin-top: -10rem;
   }
 }
 
