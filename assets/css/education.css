@@ -484,7 +484,7 @@ blockquote {
   padding: 0 20px;
 }
 
-.date {
+/* .date {
   background: #FF4081;
   display: inline-block;
   color: #FFFFFF;
@@ -492,7 +492,7 @@ blockquote {
   position: absolute;
   top: 5;
   right: 0;
-}
+} */
 
 .alignment{
   padding-left: 20px;
