@@ -749,3 +749,21 @@ a:link {
     transform: skew(-12deg) rotate(-6deg);
   }
 }
+.highlight-title {
+  color: #007bff;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-weight: bold;
+}
+
+.highlight-title:hover {
+  color: rgb(255, 159, 33);
+  text-decoration: underline !important;
+  font-weight: bold;
+}
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 300px; /* hoặc tuỳ bạn chọn */
+}

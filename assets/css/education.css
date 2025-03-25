@@ -824,3 +824,26 @@ blockquote {
     margin-top: -40px;
   }
 }
+/* Tên trường - màu cam dark mode, xanh light mode */
+.school-name-color {
+  color: rgb(255, 159, 33);
+}
+
+/* Cấp bậc học - màu xanh dark mode, cam light mode */
+ .degree-name-color {
+  color: #add5ff;
+}
+/* Mặc định luôn là màu cam */
+.school-name-color {
+  color: rgb(255, 159, 33);
+  font-weight: 700; /* hoặc dùng bold cũng được */
+}
+
+/* Khi là light mode thì thêm viền trắng */
+html[light-mode="light"] .school-name-color {
+  /* -webkit-text-stroke: 0.8px white; */
+  /* Hoặc dùng text-shadow nếu bạn muốn hiệu ứng nhẹ nhàng hơn */
+  /* text-shadow: 0 0 1px rgb(0, 0, 0), 0 0 1px rgb(0, 0, 0); */
+}
+
+

@@ -9,21 +9,45 @@ const exp = [
     cardImage: "assets/images/spreeai.jpeg",
     place: "SpreeAI",
     time: "(Nov, 2024 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    desp: `<br>
+<div style="text-align: center; font-weight: bold;">Multimodal-LLM / Virtual Try-On / Mixture of Experts</div>
+<br>
+<div>
+  I’m working on multimodal representations for physically-grounded understanding of the human body and garments with 
+  <a href="https://www.cs.cmu.edu/~aayushb/" class="highlight-title" target="_blank">Dr. Aayush Bansal</a> and 
+  <a href="https://minhpvo.github.io/" class="highlight-title" target="_blank">Dr. Minh Vo</a>.
+</div>`
+
   },
   {
     title: "AI Research Resident",
     cardImage: "assets/images/VinAi-Logo.png",
     place: "VinAI Research",
     time: "(Feb, 2023 - Oct, 2024)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+    desp: `<br>
+<div style="text-align: center; font-weight: bold;">3D Perception / Scene Understanding / Vision-Language Model
+</div>
+<br>
+<div>
+  I had an enriching two-year journey at VinAI, where I focused on 3D scene understanding, Neural Radiance Fields, Vision-Language Models, and 3D Large Language Models. I had the privilege of working with 
+  <a href="https://www.khoinguyen.org/" class="highlight-title" target="_blank">Dr. Khoi Nguyen</a>, 
+  <a href="https://scholar.google.com/citations?user=FYZ5ODQAAAAJ&hl=en" class="highlight-title" target="_blank">Dr. Anh Tran</a>, 
+  <a href="https://sites.google.com/view/cuongpham/home" class="highlight-title" target="_blank">Prof. Cuong Pham</a> and 
+  <a href="https://scholar.google.com/citations?user=hRV0tY4AAAAJ&hl=en" class="highlight-title" target="_blank">Prof. Minh Hoai</a>. 
+  During this time, I first-authored several top-tier publications and achieved recognition at workshops (ICCV'23, CVPR'24, CVPR'25, …).
+</div>`
   },
   {
     title: "Research Assistant",
     cardImage: "assets/images/uit.png",
     place: "University of Information Technology - VNUHCM",
     time: "(Oct, 2020 - Jan, 2023)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+    desp: `<br>
+    <div style="text-align: center; font-weight: bold;">2D perception / (Oriented) Object Detection / Image Dehazing</div>
+    <br>
+    <div>
+      During my undergraduate studies, I was captivated by the rapid evolution of object detection algorithms. This early exposure inspired me to first-author my first research paper as a sophomore, paving the way for four more published works centered on (oriented) object detection.
+    </div>`
   },
 ];
 
@@ -34,7 +58,8 @@ const showCards2 = () => {
       (output += `        
     <div class="col gaap" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="400"> 
       <div class="card card1">
-        <img src="${cardImage}" class="featured-image"/>
+        <img src="${cardImage}" class="featured-image aspect-ratio-1-1" />
+
         <article class="card-body">
           <header>
             <div class="title">

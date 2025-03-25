@@ -89,7 +89,7 @@ const research = [
     image: "assets/images/opensun.png",
     citation: {
       vancouver:
-        "Wang, Li and Li, Dong and Zhu, Yousong and Tian, Lu and Shan, Yi. Dual Super-Resolution Learning for Semantic Segmentation. IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2020.",
+        "The ability to perceive, understand and interact with arbitrary 3D environments is a long-standing goal in both academia and industry with applications in AR/VR as well as robotics. Current 3D scene understanding models are largely limited to recognizing a closed set of pre-defined object classes. Recently, large visual-language models, such as CLIP, have demonstrated impressive capabilities trained solely on internet-scale image-language pairs. Some initial works have shown that these models have the potential to extend 3D scene understanding not only to open set recognition, but also offer additional applications such as affordances, materials, activities, and properties of unseen environments. The goal of this workshop is to bundle these siloed efforts and to discuss and establish clear task definitions, evaluation metrics, and benchmark datasets.",
     },
     abstract:
       "VinAI-3DIS has ranked top 1 in Open-Vocabulary 3D instance retrieval track with improved version of Open3DIS.",
