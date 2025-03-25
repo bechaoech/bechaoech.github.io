@@ -23,7 +23,7 @@ const exp = [
     title: "AI Research Resident",
     cardImage: "assets/images/VinAi-Logo.png",
     place: "VinAI Research",
-    time: "(Feb, 2023 - Oct, 2024)",
+    time: "(Feb, 2023 - Nov, 2024)",
     desp: `<br>
 <div style="text-align: center; font-weight: bold;">3D Perception / Scene Understanding / Vision-Language Model
 </div>

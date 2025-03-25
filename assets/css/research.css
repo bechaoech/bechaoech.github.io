@@ -851,3 +851,15 @@ html[light-mode="dark"] .authors strong {
 html[light-mode="light"] .authors strong {
   color: #027bff; /* Màu xanh */
 }
+/* Màu cho phần acronym trong ngoặc (giống Phuc Nguyen) */
+.highlight-acronym {
+  font-weight: bold;
+}
+
+html[light-mode="dark"] .highlight-acronym {
+  color: rgb(255, 159, 33); /* Màu cam */
+}
+
+html[light-mode="light"] .highlight-acronym {
+  color: #027bff; /* Màu xanh */
+}

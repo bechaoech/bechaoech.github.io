@@ -153,6 +153,13 @@ const research = [
   // },
 ];
 AOS.init();
+// Hàm để đổi màu phần trong ngoặc đơn
+function highlightConferenceAcronym(conferenceText) {
+  return conferenceText.replace(/\(([^)]+)\)/g, (match, p1) => {
+    return `<span class="highlight-acronym">(${p1})</span>`;
+  });
+}
+
 const fillData = () => {
   let output = "";
   research.forEach(
@@ -180,7 +187,8 @@ const fillData = () => {
                     <a href="${link ? link : '#'}" target="_blank" class="paperTitle"> ${title} </a>
                     <div class = "authors"> ${authors} </div> 
                     
-                    <div class="rConferences"> ${conferences} 
+                    <div class="rConferences"> ${highlightConferenceAcronym(conferences)} 
+
                         <div class="researchY">${researchYr}</div>
                     </div>
                     
