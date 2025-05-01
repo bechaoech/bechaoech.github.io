@@ -97,7 +97,7 @@ section > div {
 
 /*color of experience page headings*/
 .my_experience {
-  color: #4e00bb;
+  color: #FF9FA9;
 }
 
 .sub-heading {
@@ -450,7 +450,7 @@ ul ol {
 }
 
 .volunteerTitle {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.2;
   padding-bottom: 40px;
   transform: translateY(40px);
@@ -461,10 +461,11 @@ ul ol {
 
 .copy {
   font-size: 1rem;
-  font-style: italic;
+  /* font-style: italic; */
   line-height: 1.35;
   padding-bottom: 40px;
   color: var(--head-col);
+  text-align: justify; /* ✅ Thêm dòng này */
 }
 
 /*Hackathon Section Starts*/
@@ -704,4 +705,89 @@ a:link {
   50% {
     transform: skew(-12deg) rotate(-6deg);
   }
+}
+
+/* Màu nội dung của UEH */
+html[light-mode="dark"] .desp-left {
+  color: white !important;
+}
+
+html[light-mode="light"] .desp-left {
+  color: black !important;
+}
+
+/* Màu chữ Him, Home, Heart */
+/* Mặc định trong dark mode: màu hồng */
+html[light-mode="dark"] .volunteerTitle {
+  color: #FF9FA9;
+}
+
+/* Khi hover trong dark mode: đổi thành đen */
+html[light-mode="dark"] .volunteerCard:hover .volunteerTitle {
+  color: black;
+}
+
+
+/* Màu khi hover vào thẻ Him, Home, Heart */
+html[light-mode="dark"] .volunteerCard:before {
+  background: #FF9FA9 !important; /* Hồng trong dark mode */
+}
+
+html[light-mode="light"] .volunteerCard:before {
+  background: #292929 !important; /* Xanh dương như hiện tại */
+}
+
+/* Màu phần nội dung dưới Him, Home, Heart */
+/* Dark mode mặc định: chữ trắng */
+html[light-mode="dark"] .copy {
+  color: white !important;
+}
+
+/* Khi hover card trong dark mode: chữ đen */
+html[light-mode="dark"] .volunteerCard:hover .copy {
+  color: black !important;
+}
+
+/* Màu chân thẻ Him, Home, Heart */
+html[light-mode="dark"] .volunteerCard {
+  box-shadow: 0px 8px #d1d1e0, 0 6px 20px 0 rgba(0, 0, 0, 0.19),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+html[light-mode="light"] .volunteerCard {
+  box-shadow: 0px 8px black, 0 6px 20px 0 rgba(0, 0, 0, 0.19),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19),
+              0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Hiệu ứng rê chuột vào thẻ Him */
+/* Ẩn phần nội dung ban đầu */
+.volunteerCard .copy {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  /* transition: opacity 0.5s ease, max-height 0.5s ease; */
+}
+
+/* Khi hover thì ảnh mờ dần và biến mất */
+.volunteerCard:hover .card-img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Khi hover thì hiện nội dung ra */
+.volunteerCard:hover .copy {
+  opacity: 1;
+  max-height: 500px; /* hoặc đủ để chứa nội dung */
+  transform: translateY(-200px); /* đẩy phần mô tả lên gần chữ Him */
+}
+
+/* Di chuyển tiêu đề lên khi hover */
+.volunteerCard .volunteerTitle {
+  transition: transform 0.5s ease;
+}
+
+.volunteerCard:hover .volunteerTitle {
+  transform: translateY(-180px); /* đẩy lên trên */
 }

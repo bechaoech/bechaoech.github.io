@@ -5,26 +5,32 @@ AOS.init();
 const experiencecards = document.querySelector(".experience-cards");
 const exp = [
   {
-    title: "Software Development Intern",
-    cardImage: "assets/images/experience-page/flipkart.jpg",
-    place: "Flipkart",
-    time: "(May, 2020 - present)",
-    desp: "<li>Worked to migrate Flipkart lite’s product page to AMP pages so that they load up instantly.</li> <li>Made changes in the current progressive web app of Flipkart to react to different actions performed on AMP page.</li> <li>Created a node module called “fk-amp” which abstracts all the files and middlewares and can be easily imported and used from express server.</li>",
+    title: "University of Economics Ho Chi Minh City (UEH)",
+    cardImage: "assets/images/experience-page/uehlogo.png",
+    place: "Bachelor's degree in Business Administration",
+    time: "(Oct, 2020 - Dec, 2023)",
+    desp: `
+  <p class="desp-center">Quality Management | 2020 - 2023</p>
+  <p class="desp-left" style="font-size: 1rem;">
+    <br> 🎓 After graduating from high school, I got into UEH. In the second semester of my freshman year, I met him — the one who later became my husband. Meeting him was a turning point I never saw coming. From that moment on, the way I thought and looked at life slowly started to change — and little by little, it shaped the me I am today 💗.
+  </p>
+`,
+
   },
-  {
-    title: "Student Developer",
-    cardImage: "assets/images/experience-page/gsoc.png",
-    place: "Google Summer Of Code",
-    time: "(Mar - Aug, 2019)",
-    desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
-  },
-  {
-    title: "Research Intern",
-    cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
-    place: "IIT, Bombay",
-    time: "(Dec, 19 - Jan, 20)",
-    desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
-  },
+  // {
+  //   title: "Student Developer",
+  //   cardImage: "assets/images/experience-page/gsoc.png",
+  //   place: "Google Summer Of Code",
+  //   time: "(Mar - Aug, 2019)",
+  //   desp: "<li>Worked with MOZILLA as a part of Google Summer Of Code.</li><li>Worked on Extension Activity Monitor which is a privileged extension for Firefox that uses the activityLog API (privileged API) to monitor the activities of the other installed extensions.</li><li>The activityLog API listens for logs from other installed extensions.</li>",
+  // },
+  // {
+  //   title: "Research Intern",
+  //   cardImage: "assets/images/experience-page/IIT_Bombay.jpg",
+  //   place: "IIT, Bombay",
+  //   time: "(Dec, 19 - Jan, 20)",
+  //   desp: "<li>Worked on the project “LTI (Learning Tools Interoperability) 2.0 standards Implementation for ekShiksha.</li><li>Designed a software that would help faculty to create a quiz using the questions from the database based on his/her choice of topics and he should be provided with various facilities and options to create a quiz of his choice.</li>",
+  // },
 ];
 
 const showCards2 = () => {
@@ -41,12 +47,11 @@ const showCards2 = () => {
               <h3>${title}</h3>
             </div>
             <p class="meta">
-              <span class="pre-heading">${place}</span><br>
-              <span class="author">${time}</span>
-            </p>
-            <ol>
-              ${desp}
-            </ol>
+  <span class="pre-heading">${place}</span>
+</p>
+<div class="desp">
+  ${desp}
+</div>
           </header>
         </article>
       </div>
@@ -62,29 +67,29 @@ document.addEventListener("DOMContentLoaded", showCards2);
 const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
-    title: "GirlScript Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/1.jpg",
+    title: "Him",
+    cardImage: "assets/images/experience-page/him.jpg",
     description:
-      "Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate.",
+      "He is the one I always turn to — a steady anchor, a quiet yet unwavering companion, even when our shared journey faces hardships or when I lose my sense of direction. From the smallest choices in daily life to the most pivotal crossroads, he listens, he understands, and he walks beside me — without noise, but with a quiet depth of understanding.",
   },
   {
-    title: "StudentCode-in 2020",
-    cardImage: "assets/images/experience-page/2.jpg",
+    title: "Home",
+    cardImage: "assets/images/experience-page/home.jpg",
     description:
-      "Responsible for handling open source contributions for the project Awesome Developer Portfolio.",
+      "No matter where we are, as long as we’re together, that place is home. This little family is my anchor — the strength that helps me step out into the world, and the haven I always long to return to.",
   },
   {
-    title: "PClub Summer Of Code 2020",
-    cardImage: "assets/images/experience-page/3.jpg",
+    title: "Heart",
+    cardImage: "assets/images/experience-page/heart.jpg",
     description:
-      "Mentoring for the projects Deep Pixel, AutoVaidya, Just Resume and Doc2pen.",
+      "I believe in living kindly and doing everything with heart and sincerity. That’s the compass that guides me — helping me recognize what to hold on to, what to let go of, what to pursue, and what to walk away from. I’m learning to listen to my heart more — because I used to rely entirely on logic. But I’ve come to realize that life isn’t just a matter of right or wrong. It’s about learning to listen to yourself a little more each day.",
   },
-  {
-    title: "Hakin-Codes",
-    cardImage: "assets/images/experience-page/4.jpg",
-    description:
-      "Mentoring for the open source projects Deeppixel, Awesome Developer Portfolios and Doc2Pen.",
-  },
+  // {
+  //   title: "Hakin-Codes",
+  //   cardImage: "assets/images/experience-page/4.jpg",
+  //   description:
+  //     "Mentoring for the open source projects Deeppixel, Awesome Developer Portfolios and Doc2Pen.",
+  // },
 ];
 
 const showCards = () => {

@@ -147,6 +147,25 @@ html[light-mode="dark"] .socialicon{
   background-color: #141516;
 }
 
+/* Facebook icon */
+.socialicon.facebook .facebook-icon {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Youtube icon */
+.youtube-icon {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+
 .kaggle i {
   margin: auto;
   font-size: 24px;
@@ -220,14 +239,23 @@ html[light-mode="dark"] .socialicon{
 
 /*
 ---------------------------
-   INSTAGRAM MICROANIMATION
+   FACEBOOK MICROANIMATION
 ---------------------------
 */
 
-.instagram-icon {
-  width: 90px !important;
- 
+/* Hiệu ứng glow mới cho Facebook */
+.socialicon.facebook {
+  transition: box-shadow 0.3s ease-in-out;
 }
+.socialicon.facebook:hover {
+  box-shadow: 0 0 15px rgba(59, 89, 152, 0.7); /* màu #3b5998 */
+}
+
+/*
+---------------------------
+   YOUTUBE MICROANIMATION
+---------------------------
+*/
 .st0 {
   fill:none;
   stroke:#EF4649;
@@ -236,44 +264,25 @@ html[light-mode="dark"] .socialicon{
   stroke-miterlimit:10;
 }
 
-.instagram:hover #littleCircle {
-  stroke-dasharray:150;
-}
+/*
+---------------------------
+   INSTAGRAM MICROANIMATION
+---------------------------
+*/
 
-.instagram #shutter{
-  display:none;
-}
-.instagram:hover #shutter{
+.instagram-icon {
+  width: 35px;
+  height: 35px;
+  margin: auto;
   display: block;
-  animation: shutter 1s linear infinite;
-}
-.instagram:hover #lens{
-  fill:#EF4649;
-  animation: lens 1.5s linear infinite;
-
 }
 
-@keyframes shutter {
-  0%, 50% {
-          stroke-dashoffset: 150;
-          
-      }
-  75% {
-          fill:#EF4649;
-          stroke-dashoffset: 0;
-          stroke-width:11;
-      }
+.socialicon.instagram {
+  transition: box-shadow 0.3s ease-in-out;
 }
-
-@keyframes lens {
-  0%, 75% {
-          opacity: 0;
-      }
-  100% {
-          opacity: 1;
-      }
+.socialicon.instagram:hover {
+  box-shadow: 0 0 15px rgba(188, 42, 141, 0.7); /* màu #bc2a8d */
 }
-
 
 /*
 ---------------------------
@@ -599,4 +608,25 @@ a:hover {
   .text{
     margin-top: 1rem;
   }
+}
+
+/* Hiệu ứng */
+/* Tạo hiệu ứng bounce cho logo Facebook*/
+@keyframes fb-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Nhảy lên */
+  }
+}
+
+
+/* Hiệu ứng logo Youtube */
+.socialicon.youtube {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.socialicon.youtube:hover {
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
