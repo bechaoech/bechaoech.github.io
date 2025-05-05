@@ -716,6 +716,14 @@ html[light-mode="light"] .desp-left {
   color: black !important;
 }
 
+html[light-mode="dark"] .desp-center {
+  color: rgb(225, 225, 225) !important;
+}
+
+html[light-mode="light"] .desp-center {
+  color: rgb(31, 31, 31) !important;
+}
+
 /* Màu chữ Him, Home, Heart */
 /* Mặc định trong dark mode: màu hồng */
 html[light-mode="dark"] .volunteerTitle {
@@ -790,4 +798,8 @@ html[light-mode="light"] .volunteerCard {
 
 .volunteerCard:hover .volunteerTitle {
   transform: translateY(-180px); /* đẩy lên trên */
+}
+/* Ẩn nút "Read More" */
+.blog-slider__button {
+  display: none !important;
 }
