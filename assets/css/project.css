@@ -1109,25 +1109,70 @@ html[light-mode="light"] .goal-title {
   transition: all 0.3s ease;
 }
 
-:root {
-  --timeline-text-light: #E07A5F;  /* ví dụ màu cam đất sáng cho light mode */
-  --timeline-text-dark: #F4A261;   /* cam vàng nhạt cho dark mode */
+/* Hiệu ứng Phd Application Overview */
+#phd-arrow {
+  font-size: 1.1rem;
+  margin-left: 6px;
+  vertical-align: middle;
 }
-body[light-mode="light"] .timeline-toggle-custom {
-  color: var(--timeline-text-light);
+/* Bảng Phd giữa ô theo chiều dọc */
+.table thead th {
+  vertical-align: middle !important;
 }
 
-body[light-mode="dark"] .timeline-toggle-custom {
-  color: var(--timeline-text-dark);
+/* Hiệu ứng chữ bảng Phd */
+/* Màu trắng cố định cho các tiêu đề bảng */
+thead.thead-dark th {
+  color: white !important;
 }
 
-.timeline-toggle-custom {
-  font-size: 1.5rem;
-  cursor: pointer;
+/* Màu nội dung dòng (td) thay đổi theo chế độ sáng/tối */
+/* DARK MODE: Màu chữ nội dung bảng */
+html[light-mode="dark"] #phd-table-section td {
+  color: rgba(255, 255, 255, 0.883); /* hoặc trắng hoàn toàn: #ffffff */
+}
+
+/* LIGHT MODE: Màu chữ nội dung bảng */
+html[light-mode="light"] #phd-table-section td {
+  color: #191919; /* hoặc màu tối hơn nếu cần */
+}
+
+.subsection-title {
+  text-align: center;
+  font-size: 1.5rem; /* tương đương với mục tiêu bạn yêu cầu */
   font-weight: bold;
-  transition: all 0.2s ease-in-out;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.timeline-toggle-custom:hover {
+/* hiệu ứng tiêu đề our full journey */
+.goal-section-title {
+  margin-left: 50px;
+  text-align: left;
+  font-weight: bold;
+}
+/* --- */
+.indented-steps {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 50px;
+  text-align: left;
+}
+.indented-steps p {
+  margin-bottom: 0.5rem;
+}
+.sop-warning {
+  color: red;
+}
+.sample-link {
+  color: rgb(255,159,33);          
+  font-style: italic;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.sample-link:hover {
   text-decoration: underline;
+  /* color: #46a6ff; */
 }
