@@ -1176,3 +1176,12 @@ html[light-mode="light"] #phd-table-section td {
   text-decoration: underline;
   /* color: #46a6ff; */
 }
+
+.lor-subheading {
+  font-size: 1.15rem;        /* to hơn văn bản thường một chút */
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 40px;        /* thụt vào giống các dòng “Writer X” */
+  color: var(--text);       /* tự đổi theo dark/light mode */
+}
