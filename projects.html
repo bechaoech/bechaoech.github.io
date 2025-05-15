@@ -657,6 +657,38 @@ After narrowing down the options, we realized that the U.S. was the most suitabl
       <br><br>Not every email received a response — and we understood that. But a few professors did respond positively, confirming they had seen his application and would review it carefully. Some even mentioned that they would recommend his file to the admissions committee, or invited him to a lab interview shortly after reading his email.
       <br><br>So even though cold emailing after submission may seem late to some, when done correctly, it can still be a meaningful and strategic way to stand out, show genuine interest, and demonstrate your readiness to collaborate.
     </p>
+    <!-- Cold Email Sample Toggle -->
+<p class="text-center">
+  <strong class="swot-toggle" id="email-toggle">
+    Sample Cold Email<span id="email-arrow">▼</span>
+  </strong>
+</p>
+
+<!-- Nội dung Cold Email (ẩn lúc đầu) -->
+<div id="email-section" class="container mb-5" style="display: none;" data-aos="fade-up" data-aos-delay="100" data-aos-duration="600">
+  <div class="content">
+    <p style="text-align: justify; max-width: 800px; margin: 0 auto; white-space: pre-wrap;">
+Dear Professor X,
+
+My name is Phuc Nguyen Duc Anh and I am writing to express my strong interest in joining your lab as a Ph.D. student in Fall 2025, as I deeply admire your research on 2D perception and video understanding. I am an AI Research Engineer at [ABC], with two years of prior experience as an AI Research Resident at [DEF]. I have applied to the Ph.D. program at the Department of Computer Science and mentioned your name in my Statement of Purpose, as I believe my research interests closely align with your lab's focus. I believe my skills and experiences would enable me to make meaningful contributions to your research ongoing and future projects. I am reaching out to explore whether I might be a good fit for your lab starting in Fall 2025.
+
+I am curious to know if you are currently considering applications for new Ph.D. students in Fall 2025 and whether my background aligns with your lab's goals.
+
+A little bit about myself: I am passionate about advancing machines' ability to understand and interact with the physical world through natural language. My research focuses on enabling machines to perceive their surroundings as humans do, which I believe is crucial for achieving a fine-grained understanding of 3D environments. To this end, I have conducted extensive studies on 3D segmentation using natural language descriptions, culminating in one paper accepted at CVPR’24, two papers currently under submission, and two workshop winnings (ICCV’23, CVPR’24). These accomplishments have provided me with a strong foundation in 3D computer vision, image and scene understanding.
+
+Moreover, recent breakthroughs in multimodal Large Language Models (M-LLMs) have inspired me to explore their integration into my work. In one of my projects, I utilized M-LLMs to tokenize 3D scene representations, enhancing their reasoning capabilities for detailed analysis. My expertise in computer vision and my skills in leveraging state-of-the-art techniques equip me to make meaningful contributions to your lab's research. Furthermore, I am also eager to learn and explore new research directions that can have a significant impact on the world today.
+
+For more details, please find my resume attached and my project page: <a href="https://phucnda.github.io" class="sample-link" target="_blank"><strong><em>phucnda.github.io</em></strong></a>
+
+I would greatly appreciate your feedback on whether you are currently accepting students for Fall 2025 and whether my background aligns with your lab’s research. I’m happy if we could arrange a brief online meeting or call to discuss my suitability for your lab and potential research directions under your supervision. Thank you for your time and consideration!
+
+Best Regards,  
+PhucNDA
+<br>📄 <a href="https://phucnda.github.io/assets/docs/phucnda_CV.pdf" class="sample-link" target="_blank"><strong><em>phucnda_CV</em></strong></a>
+    </p>
+  </div>
+</div>
+
   </div>
 
  <!-- Section 7 -->
@@ -778,6 +810,29 @@ timelineToggle.addEventListener('click', () => {
   }
 });
 
+    </script>
+    <script>
+      const emailToggle = document.getElementById('email-toggle');
+      const emailSection = document.getElementById('email-section');
+      const emailArrow = document.getElementById('email-arrow');
+    
+      emailToggle.addEventListener('click', () => {
+        const isVisible = emailSection.style.display === 'block';
+    
+        if (!isVisible) {
+          emailSection.style.display = 'block';
+          emailSection.classList.remove('fade-out-swot');
+          emailSection.classList.add('fade-in-swot');
+          emailArrow.innerText = '▲';
+        } else {
+          emailSection.classList.remove('fade-in-swot');
+          emailSection.classList.add('fade-out-swot');
+          setTimeout(() => {
+            emailSection.style.display = 'none';
+          }, 400);
+          emailArrow.innerText = '▼';
+        }
+      });
     </script>
     
 

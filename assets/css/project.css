@@ -1185,3 +1185,8 @@ html[light-mode="light"] #phd-table-section td {
   margin-left: 40px;        /* thụt vào giống các dòng “Writer X” */
   color: var(--text);       /* tự đổi theo dark/light mode */
 }
+
+#email-arrow {
+  font-size: 0.8em; /* Giảm kích thước tam giác */
+  margin-left: 4px;
+}
