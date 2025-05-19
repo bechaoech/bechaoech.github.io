@@ -896,6 +896,12 @@ html[light-mode="light"] .goal-title {
   margin-left: 6px;
   vertical-align: middle;
 }
+#phd-table-arrow {
+  font-size: 1.1rem;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
 
 /* Hiệu ứng bảng SWOT */
 .swot-box {
