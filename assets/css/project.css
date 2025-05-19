@@ -1190,3 +1190,27 @@ html[light-mode="light"] #phd-table-section td {
   font-size: 0.8em; /* Giảm kích thước tam giác */
   margin-left: 4px;
 }
+
+.umd-color {
+  color: #ffd200;
+  font-weight: bold;
+}
+html[light-mode="light"] .umd-color {
+  color: #e21833;
+}
+.ucsd-color {
+  color: #C69214; /* mặc định là màu trong dark mode */
+  font-weight: bold;
+}
+
+html[light-mode="light"] .ucsd-color {
+  color: #00629B;
+}
+.ut-austin-color {
+  color: #bf5700;
+  font-weight: bold;
+}
+
+.goal-title {
+  scroll-margin-top: 200px; /* điều chỉnh khoảng cách để tiêu đề hiện rõ khi cuộn đến */
+}
