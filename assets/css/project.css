@@ -1026,7 +1026,7 @@ html[light-mode="light"] .goal-title {
 }
 
 .timeline-container.left .content {
-  text-align: right;
+  text-align: left;
 }
 
 .timeline-container.right .content {
