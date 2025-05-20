@@ -28,13 +28,14 @@ html {
 
 @media (max-width: 766px) {
   .dropdown {
-    position: absolute;
-    padding-right: 3.5rem;
+    position: static !important; /* thay absolute */
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 2rem;
   }
   .godown {
-    z-index: 1;
-    padding-top: 8rem;
-    padding-left: 3.3rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
   }
 }
 .head-upper {
@@ -120,9 +121,9 @@ section > div {
 }
 @media only screen and (max-width: 550px) {
   .experience-cards {
-    overflow: hidden;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-top: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -231,9 +232,13 @@ ul ol {
 }
 
 @media only screen and (max-width: 767px) {
+   .card1 {
+    max-height: none;
+    margin-top: 2rem;
+  }
   .card1 .featured-image {
-    height: 400px;
-    width: 100%;
+    height: auto;
+    max-height: 250px;
   }
 }
 
@@ -802,4 +807,56 @@ html[light-mode="light"] .volunteerCard {
 /* Ẩn nút "Read More" */
 .blog-slider__button {
   display: none !important;
+}
+
+.mobile-spacer {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    height: auto !important;
+    min-height: unset !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .card1 {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .card1 .featured-image {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .exp-head {
+    margin-bottom: 3rem !important; /* hoặc tăng lên nếu cần nhiều khoảng trống hơn */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-slider {
+    width: 80% !important;
+    margin: 2rem auto !important;
+  }
+
+  .blog-slider__img {
+    width: 85% !important;
+  }
+
+  .blog-slider__content {
+    padding: 0 1rem !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-slider__text {
+    text-align: left !important;
+  }
 }

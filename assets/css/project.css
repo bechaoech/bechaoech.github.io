@@ -104,12 +104,13 @@ body[light-mode="dark"] .light-mode-button span:nth-child(2) {
 @media (max-width: 766px) {
   .dropdown {
     position: absolute;
+    padding-top: 30rem;
     padding-right: 3.5rem;
   }
   .godown {
     z-index: 1;
-    padding-top: 15rem;
-    padding-left: 3.3rem;
+    padding-top: auto;
+    padding-left: auto;
   }
 }
 
@@ -1219,4 +1220,39 @@ html[light-mode="light"] .ucsd-color {
 
 .goal-title {
   scroll-margin-top: 200px; /* điều chỉnh khoảng cách để tiêu đề hiện rõ khi cuộn đến */
+}
+
+@media only screen and (max-width: 767px) {
+  .content-after-svg {
+    margin-top: 30rem; /* Điều chỉnh tùy độ lệch mong muốn */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .timeline::after {
+    left: 13px; /* Đưa đường timeline về bên trái */
+  }
+
+  .timeline-container {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 1rem;
+  }
+
+  .timeline-container.left::after,
+  .timeline-container.right::after {
+    left: 0 !important; /* Đưa dấu chấm về bên trái */
+  }
+
+  .timeline-container.left,
+  .timeline-container.right {
+    left: 0 !important;
+  }
+
+  .timeline-container .content {
+    text-align: left !important;
+  }
+}
+.timeline-container .content h3 {
+  text-align: left !important;
 }
