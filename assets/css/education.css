@@ -23,7 +23,7 @@ html[light-mode="dark"] {
   --shadow: 0 4px 8px 0 rgba(104, 102, 102, 0.2);
   --border: none;
   --meta-col: rgb(155, 149, 149);
-  --head-col: #fff;
+  --head-col: #ced4e2;
   --tint-col: #ecf0f3be;
 }
 
@@ -39,7 +39,7 @@ html {
 /*color of education page heading*/
 
 .edu_background {
-  color: #4e00bb;
+  color: #ff9fa9;
 }
 
 /* -----Education Section CSS----- */
@@ -848,3 +848,175 @@ blockquote {
       text-align: center;
     }
   }
+/* Home Flavors cards */
+#home-flavors-cards {
+  max-width: 1100px;
+  margin: 3rem auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.hf-card {
+  display: flex;
+  background: #242427;              /* nền mặc định (dark) */
+  border-radius: 2rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.4);
+  overflow: visible;
+}
+
+.hf-card-image {
+  flex: 0 0 38%;
+  display: flex;
+  align-items: center;
+  transform: translateX(-30px);
+  justify-content: center;
+}
+
+.hf-card-image img {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 1.8rem;
+  object-fit: cover;
+  background: #f8f4ec; /* nền be giống hình minh hoạ */
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+/* Hover: phóng nhẹ lên (chung cho cả 2 mode) */
+.hf-card-image:hover img {
+  transform: scale(1.05);
+}
+
+.hf-card-body {
+  flex: 1;
+  padding-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ced4e2;
+}
+
+.hf-title {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.hf-subtitle {
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  /* MÀU CHUNG CHO CẢ 2 CHẾ ĐỘ */
+  color: #9da3b5;
+}
+
+.hf-text {
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: #d7dde9;
+}
+
+/* Responsive: stack hình lên trên khi màn hình nhỏ */
+@media (max-width: 768px) {
+  .hf-card {
+    flex-direction: column;
+    padding: 1.8rem 1.5rem;
+  }
+
+  .hf-card-image {
+    flex: unset;
+    margin-bottom: 1.5rem;
+  }
+
+  .hf-card-body {
+    padding-left: 0;
+  }
+}
+
+/* Lightbox overlay */
+.hf-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Khi mở */
+.hf-lightbox.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hf-lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 1.8rem;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.95);
+}
+
+/* Nút đóng (dấu X) */
+.hf-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  font-size: 2.4rem;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ---------- Light & Dark mode cho Home Flavors ---------- */
+
+/* DARK MODE */
+html[light-mode="dark"] .hf-card {
+  background: #242427;
+  color: #ced4e2;
+}
+
+html[light-mode="dark"] .hf-title {
+  color: #ffffff;
+}
+
+html[light-mode="dark"] .hf-text {
+  color: #d7dde9;
+}
+
+/* Hover trong DARK MODE: viền trắng */
+html[light-mode="dark"] .hf-card-image:hover img {
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.9);
+}
+
+/* LIGHT MODE */
+html[light-mode="light"] .hf-card {
+  background: #ffffff; /* nền sáng nhẹ */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  color: #333333;
+}
+
+html[light-mode="light"] .hf-title {
+  color: #222222;
+}
+
+html[light-mode="light"] .hf-text {
+  color: #444444;
+}
+
+/* Hover trong LIGHT MODE: viền đen */
+html[light-mode="light"] .hf-card-image:hover img {
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+}
+
+/* Subtitle GIỮ NGUYÊN MÀU Ở CẢ 2 MODE (nếu muốn chắc chắn override) */
+html[light-mode="dark"] .hf-subtitle,
+html[light-mode="light"] .hf-subtitle {
+  color: #9da3b5;
+}
+
