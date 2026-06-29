@@ -860,3 +860,11 @@ html[light-mode="light"] .volunteerCard {
     text-align: left !important;
   }
 }
+.volunteerCard .volunteer-img {
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  height: auto !important;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}

@@ -129,11 +129,74 @@ With a happy stomach, he can now focus wholeheartedly on his PhD — and I feel 
   </p>
 </div>
         </div>
+        <div
+  class="hf-filters"
+  data-aos="fade-up"
+  data-aos-delay="150"
+  aria-label="Filter dishes by category"
+>
+  <button type="button" class="hf-filter-btn active" data-filter="all">
+    All
+  </button>
+
+  <button type="button" class="hf-filter-btn" data-filter="soup">
+    Noodle Soups
+  </button>
+
+  <button type="button" class="hf-filter-btn" data-filter="stir-fried">
+    Tossed &amp; Stir-Fried
+  </button>
+
+  <button type="button" class="hf-filter-btn" data-filter="rice-pasta">
+    Rice &amp; Pasta
+  </button>
+
+  <button type="button" class="hf-filter-btn" data-filter="light">
+    Light Bites
+  </button>
+
+  <button type="button" class="hf-filter-btn" data-filter="comfort">
+    Comfort Bowls
+  </button>
+</div>
   <!-- CARD 1 -->
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+  <div class="hf-slider" aria-label="Bun Bo photos">
+    <img
+      class="hf-slide active"
+      src="assets/images/bun bo.png"
+      alt="Bun Bo photo 1"
+    />
+
+    <img
+      class="hf-slide"
+      src="assets/images/bun bo 2.png"
+      alt="Bun Bo photo 2"
+    />
+
+    <button
+      type="button"
+      class="hf-slider-btn hf-slider-prev"
+      aria-label="Previous Bun Bo photo"
+    >
+      &#8249;
+    </button>
+
+    <button
+      type="button"
+      class="hf-slider-btn hf-slider-next"
+      aria-label="Next Bun Bo photo"
+    >
+      &#8250;
+    </button>
+
+    <div class="hf-slider-dots" aria-hidden="true">
+      <span class="hf-slider-dot active"></span>
+      <span class="hf-slider-dot"></span>
     </div>
+  </div>
+</div>
     <div class="hf-card-body">
       <h3 class="hf-title">Bun Bo</h3>
       <p class="hf-subtitle">His favorite dish — and the one I cook the most often</p>
@@ -150,7 +213,7 @@ With a happy stomach, he can now focus wholeheartedly on his PhD — and I feel 
   </div>
 
   <!-- CARD 2 -->
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/bun ca hoi nau ngot.png" alt="Bun Ca Hoi Nau Ngot" />
     </div>
@@ -170,7 +233,7 @@ With a happy stomach, he can now focus wholeheartedly on his PhD — and I feel 
     </div>
   </div>
 
-<div class="hf-card">
+<div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/bun quay.png" alt="Bun Quay" />
     </div>
@@ -187,7 +250,7 @@ Still, the flavor of this bun quay remains rich and comforting — every time I 
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/hu tieu.png" alt="Hu Tieu" />
     </div>
@@ -201,7 +264,7 @@ My version of hu tieu is usually served with pork ribs, meatballs, shrimp, and q
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/bun thai.png" alt="Bun Thai" />
     </div>
@@ -216,7 +279,7 @@ Back home, I used to dip it in green chili salt, but it’s hard to find that he
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/bun thit bo rau ram.png" alt="Bun Thit Bo Rau Ram" />
     </div>
@@ -232,7 +295,7 @@ The whole thing takes just about 30 minutes to make, so honestly, calling it “
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/mien ga nam.png" alt="Mien Ga Nam" />
     </div>
@@ -246,7 +309,7 @@ I usually serve it with chopped cilantro and a small bowl of spicy salt-and-chil
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/nui thit vien.png" alt="Nui Thit Vien" />
     </div>
@@ -261,7 +324,7 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
       <img src="assets/images/nui hoanh thanh.png" alt="Nui Hoanh Thanh" />
     </div>
@@ -276,12 +339,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="soup">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/hu tieu suon sun.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Hu Tieu Suon Sun</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -291,12 +354,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="light">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/goi cuon.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Goi Cuon</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -306,12 +369,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="comfort">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/sup.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Sup</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -321,12 +384,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="stir-fried">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/nui chien trung.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Nui Chien Trung</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -336,12 +399,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="rice-pasta">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/mi y sot bo bam.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Mi Y Sot Bo Bam</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -351,12 +414,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="rice-pasta">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/mi y tom.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Mi Y Tom</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -366,12 +429,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="stir-fried">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/mi tuong den.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Mi Tuong Den</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -381,12 +444,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="stir-fried">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/mi xao bo.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Mi Xao Bo</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -396,12 +459,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="rice-pasta">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/lasagna.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Lasagna</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -411,12 +474,12 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
-  <div class="hf-card">
+  <div class="hf-card" data-category="rice-pasta">
     <div class="hf-card-image">
-      <img src="assets/images/bun bo.png" alt="Bun Bo" />
+      <img src="assets/images/com chien bo.png" alt="Bun Bo" />
     </div>
     <div class="hf-card-body">
-      <h3 class="hf-title">Bun Bo</h3>
+      <h3 class="hf-title">Com Chien Bo</h3>
       <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
       <p class="hf-text">
         This was one of the very first dishes I tried to cook after we moved. The broth
@@ -426,6 +489,176 @@ I usually cook it with meatballs, shrimp, and quail eggs, add a few pieces of bo
       </p>
     </div>
   </div>
+  <div class="hf-card" data-category="soup">
+    <div class="hf-card-image">
+      <img src="assets/images/banh canh cha ca.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Banh Canh Cha Ca</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="light">
+    <div class="hf-card-image">
+      <img src="assets/images/banh uot.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Banh Uot</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="stir-fried">
+    <div class="hf-card-image">
+      <img src="assets/images/bun gao xao.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Bun Gao Xao</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="comfort">
+    <div class="hf-card-image">
+      <img src="assets/images/chao suon.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Chao Suon</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="comfort">
+    <div class="hf-card-image">
+      <img src="assets/images/chao ech.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Chao Ech</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="rice-pasta">
+    <div class="hf-card-image">
+  <div class="hf-slider" aria-label="Com Ga Quay Tieu photos">
+    <img
+      class="hf-slide active"
+      src="assets/images/com ga quay tieu 2.png"
+      alt="Com Ga Quay Tieu photo 1"
+    />
+
+    <img
+      class="hf-slide"
+      src="assets/images/com ga quay tieu.png"
+      alt="Com Ga Quay Tieu photo 2"
+    />
+
+    <button
+      type="button"
+      class="hf-slider-btn hf-slider-prev"
+      aria-label="Previous Com Ga Quay Tieu photo"
+    >
+      &#8249;
+    </button>
+
+    <button
+      type="button"
+      class="hf-slider-btn hf-slider-next"
+      aria-label="Next Com Ga Quay Tieu photo"
+    >
+      &#8250;
+    </button>
+
+    <div class="hf-slider-dots" aria-hidden="true">
+      <span class="hf-slider-dot active"></span>
+      <span class="hf-slider-dot"></span>
+    </div>
+  </div>
+</div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Com Ga Quay Tieu</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="rice-pasta">
+    <div class="hf-card-image">
+      <img src="assets/images/com tron han quoc.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Com Tron Han Quoc</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="stir-fried">
+    <div class="hf-card-image">
+      <img src="assets/images/mi tron.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Mi Tron</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+  <div class="hf-card" data-category="stir-fried">
+    <div class="hf-card-image">
+      <img src="assets/images/udon xao bo.png" alt="Bun Bo" />
+    </div>
+    <div class="hf-card-body">
+      <h3 class="hf-title">Udon Xao Bo</h3>
+      <p class="hf-subtitle">A simple bowl of warmth for our first cold evening in Maryland.</p>
+      <p class="hf-text">
+        This was one of the very first dishes I tried to cook after we moved. The broth
+        wasn’t perfect, and the noodles were a bit overcooked, but it tasted like home.
+        We ate it sitting on the floor, surrounded by unpacked boxes — and somehow it
+        still felt like a small celebration.
+      </p>
+    </div>
+  </div>
+
+
   
 </section>
 

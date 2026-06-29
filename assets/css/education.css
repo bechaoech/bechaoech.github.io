@@ -924,9 +924,17 @@ blockquote {
     padding: 1.8rem 1.5rem;
   }
 
-  .hf-card-image {
+   .hf-card-image {
     flex: unset;
+    width: 100%;
     margin-bottom: 1.5rem;
+    transform: none;
+    justify-content: center;
+  }
+
+  .hf-card-image img {
+    display: block;
+    margin: 0 auto;
   }
 
   .hf-card-body {
@@ -1019,4 +1027,251 @@ html[light-mode="dark"] .hf-subtitle,
 html[light-mode="light"] .hf-subtitle {
   color: #9da3b5;
 }
+/* ===================================
+   HOME FLAVORS CATEGORY FILTERS
+=================================== */
 
+.hf-filters {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0 1rem;
+}
+
+.hf-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+  padding: 0.75rem 1.25rem;
+
+  border: 1px solid;
+  border-radius: 999px;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: center;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hf-filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hf-filter-btn:focus-visible {
+  outline: 3px solid rgba(255, 159, 169, 0.35);
+  outline-offset: 3px;
+}
+
+/* Dark mode */
+html[light-mode="dark"] .hf-filter-btn {
+  background: transparent;
+  border-color: #45454a;
+  color: #d7dde9;
+}
+
+html[light-mode="dark"] .hf-filter-btn:hover {
+  border-color: #ff9fa9;
+  color: #ff9fa9;
+}
+
+html[light-mode="dark"] .hf-filter-btn.active {
+  background: #ff9fa9;
+  border-color: #ff9fa9;
+  color: #242427;
+}
+
+/* Light mode */
+html[light-mode="light"] .hf-filter-btn {
+  background: transparent;
+  border-color: #d5d5da;
+  color: #444444;
+}
+
+html[light-mode="light"] .hf-filter-btn:hover {
+  border-color: #ff9fa9;
+  color: #d85f6c;
+}
+
+html[light-mode="light"] .hf-filter-btn.active {
+  background: #ff9fa9;
+  border-color: #ff9fa9;
+  color: #222222;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hf-filters {
+    gap: 0.55rem;
+    padding: 0 0.5rem;
+  }
+
+  .hf-filter-btn {
+  min-height: 46px;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.92rem;
+}
+}
+/* ===================================
+   HOME FLAVORS IMAGE SLIDER
+=================================== */
+
+.hf-slider {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  overflow: visible;
+  border-radius: 1.8rem;
+  touch-action: pan-y;
+}
+
+.hf-slider .hf-slide {
+  display: none;
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.hf-slider .hf-slide.active {
+  display: block;
+}
+
+/* Previous and next buttons */
+.hf-slider-btn {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 48px;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.9);
+
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.95);
+
+  transition:
+    opacity 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Only show the available arrow when hovering */
+.hf-slider:hover .hf-slider-btn:not(.is-hidden),
+.hf-slider:focus-within .hf-slider-btn:not(.is-hidden) {
+  opacity: 0.85;
+  pointer-events: auto;
+  transform: translateY(-50%) scale(1);
+}
+
+.hf-slider .hf-slider-btn:not(.is-hidden):hover {
+  background: transparent;
+  color: #ffffff;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hf-slider-prev {
+  left: 0.05rem;
+}
+
+.hf-slider-next {
+  right: 0.05rem;
+}
+
+/* Hide the unavailable direction */
+.hf-slider-btn.is-hidden {
+  visibility: hidden;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* Touchscreens have no hover */
+@media (hover: none) {
+  .hf-slider-btn:not(.is-hidden) {
+    opacity: 0.65;
+    pointer-events: auto;
+    transform: translateY(-50%);
+  }
+}
+
+/* Image position indicators */
+.hf-slider-dots {
+  position: absolute;
+  bottom: 0.8rem;
+  left: 50%;
+  z-index: 2;
+
+  display: flex;
+  gap: 0.4rem;
+
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.hf-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.hf-slider-dot.active {
+  width: 20px;
+  border-radius: 999px;
+  background: #ff9fa9;
+}
+
+/* Mobile slider controls */
+@media (max-width: 768px) {
+  .hf-slider-btn {
+    width: 24px;
+    height: 44px;
+    font-size: 1.8rem;
+  }
+
+  .hf-slider-prev {
+    left: 0;
+  }
+
+  .hf-slider-next {
+    right: 0;
+  }
+}

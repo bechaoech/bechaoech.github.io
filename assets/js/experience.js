@@ -68,19 +68,19 @@ const volunteership = document.querySelector(".volunteership");
 const volunteershipcards = [
   {
     title: "Him",
-    cardImage: "assets/images/experience-page/him.jpg",
+    cardImage: "assets/images/experience-page/him1.jpg",
     description:
       "He is the one I always turn to — a steady anchor, a quiet yet unwavering companion, even when our shared journey faces hardships or when I lose my sense of direction. From the smallest choices in daily life to the most pivotal crossroads, he listens, he understands, and he walks beside me — without noise, but with a quiet depth of understanding.",
   },
   {
     title: "Home",
-    cardImage: "assets/images/experience-page/home.jpg",
+    cardImage: "assets/images/experience-page/home1.jpg",
     description:
       "No matter where we are, as long as we’re together, that place is home. This little family is my anchor — the strength that helps me step out into the world, and the haven I always long to return to.",
   },
   {
     title: "Heart",
-    cardImage: "assets/images/experience-page/heart.jpg",
+    cardImage: "assets/images/experience-page/heart1.jpg",
     description:
       "I believe in living kindly and doing everything with heart and sincerity. That’s the compass that guides me — helping me recognize what to hold on to, what to let go of, what to pursue, and what to walk away from. I’m learning to listen to my heart more — because I used to rely entirely on logic. But I’ve come to realize that life isn’t just a matter of right or wrong. It’s about learning to listen to yourself a little more each day.",
   },
@@ -99,7 +99,7 @@ const showCards = () => {
       (output += `        
       <div class="card volunteerCard" data-aos="fade-down" data-aos-easing="linear" data-aos-delay="100" data-aos-duration="600" style="height: 550px;width:400px">
       
-      <img src="${cardImage}" height="250" width="65" class="card-img" style="border-radius:10px">
+      <img src="${cardImage}" class="card-img volunteer-img" alt="${title}">
       <div class="content">
           <h2 class="volunteerTitle">${title}</h2><br>
           <p class="copy">${description}</p></div>
