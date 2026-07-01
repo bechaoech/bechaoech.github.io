@@ -1275,3 +1275,8 @@ html[light-mode="light"] .hf-filter-btn.active {
     right: 0;
   }
 }
+@media (max-width: 767px) {
+  .godown img {
+    transform: translateX(-40px);
+  }
+}
