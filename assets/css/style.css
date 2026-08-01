@@ -920,79 +920,6 @@ form {
 }
 
 
-/* to make the navbar open full screen on mobile */
-
-@media (max-width: 768px) {
-  .collapse navbar-collapse {
-      display: flex;
-      justify-content: center;
-  }
-  .footer {
-      padding-top: 10px;
-  }
-  #navbar-content {
-      margin-top: -200px;
-      height: 120vh;
-      text-align: center;
-      transform: translateY(25%);
-  }
-  #btnScrollToTop {
-      display: none;
-  }
-}
-
-@media (max-width: 414px) {
-  .collapse navbar-collapse {
-      display: flex;
-      justify-content: center;
-  }
-  #navbar-content {
-      margin-top: -180px;
-      height: 120vh;
-      text-align: center;
-      transform: translateY(25%);
-  }
-  #btnScrollToTop {
-      display: none;
-  }
-}
-
-@media (max-width: 375px) {
-  .collapse navbar-collapse {
-      display: flex;
-      justify-content: center;
-  }
-  #navbar-content {
-      margin-top: -180px;
-      height: 120vh;
-      text-align: center;
-      transform: translateY(25%);
-  }
-  #btnScrollToTop {
-      display: none;
-  }
-}
-
-@media (max-width: 320px) {
-  .collapse navbar-collapse {
-      display: flex;
-      justify-content: center;
-  }
-  #navbar-content {
-      margin-top: -140px;
-      height: 130vh;
-      text-align: center;
-      transform: translateY(25%);
-  }
-  .footer {
-      margin-top: 6rem;
-  }
-  #btnScrollToTop {
-      display: none;
-  }
-}
-
-
 /* box shadow for profile picture */
 
 .rounded-circle {
@@ -1136,4 +1063,239 @@ html[light-mode="dark"] .navbar-brand:hover {
   margin: 0 20px 10px 20px;
   line-height: 1.6;
 }
+/* =========================================
+   Mobile navigation — always visible
+   ========================================= */
 
+@media (max-width: 991.98px) {
+  #navbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+
+    width: 100%;
+    padding: 8px 12px 10px !important;
+
+    z-index: 10000 !important;
+  }
+
+  /* Chừa chỗ cho dark-mode toggle */
+  #navbar .navbar-brand {
+    max-width: calc(100% - 80px);
+    margin-right: auto;
+  }
+
+  /* Ẩn hamburger */
+  #navbar .navbar-toggler,
+  #navbar #js-hamburger,
+  #navbar .hamburger_wrapper {
+    display: none !important;
+  }
+
+  /* Luôn hiển thị menu */
+  #navbarSupportedContent,
+  #navbarSupportedContent.collapse,
+  #navbarSupportedContent.collapsing {
+    display: block !important;
+    position: static !important;
+
+    flex-basis: 100% !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+    visibility: visible !important;
+    overflow: visible !important;
+
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Bốn mục menu */
+  #navbar-content {
+    display: flex !important;
+align-items: center !important;
+justify-content: space-between !important;
+flex-direction: row !important;
+flex-wrap: nowrap !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 18px !important;
+gap: 0 !important;
+
+    transform: none !important;
+    list-style: none;
+  }
+
+  #navbar-content > .nav-item:not(.theme-toggle-item) {
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    text-align: center;
+  }
+
+  #navbar-content .nav-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: auto !important;
+    min-height: 42px;
+
+    margin: 0 !important;
+    padding: 6px 3px !important;
+    border-radius: 11px;
+
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.15;
+
+    white-space: nowrap !important;
+    text-align: center;
+    text-decoration: none !important;
+
+    transform: none !important;
+
+    transition:
+      color 180ms ease,
+      background-color 180ms ease;
+  }
+
+  #navbar-content .nav-link:hover,
+  #navbar-content .nav-link:focus-visible {
+    transform: none !important;
+    text-decoration: none !important;
+  }
+
+  /* Dark-mode toggle ở góc trên bên phải */
+  #navbar-content .theme-toggle-item {
+    position: absolute !important;
+    top: 8px;
+    right: 12px;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: scale(0.65) !important;
+    transform-origin: top right;
+
+    z-index: 10001;
+  }
+
+  #navbar .bike {
+    display: none !important;
+  }
+}
+
+/* Mobile light mode */
+@media (max-width: 991.98px) {
+  html[light-mode="light"] #navbar-content .nav-link {
+    color: #475569 !important;
+  }
+
+  html[light-mode="light"] #navbar-content .nav-link:hover,
+  html[light-mode="light"] #navbar-content .current-link {
+    color: #7567d8 !important;
+  }
+}
+
+/* Mobile dark mode */
+@media (max-width: 991.98px) {
+  html[light-mode="dark"] #navbar-content .nav-link {
+    color: #d4d4d8 !important;
+  }
+
+  html[light-mode="dark"] #navbar-content .nav-link:hover,
+  html[light-mode="dark"] #navbar-content .current-link {
+    color: #bbb3ff !important;
+  }
+}
+/* =========================================
+   Mobile navbar — pink underline style
+   ========================================= */
+
+@media (max-width: 991.98px) {
+  #navbar-content .nav-link {
+    position: relative;
+    border-radius: 0 !important;
+    background: transparent !important;
+    overflow: visible;
+  }
+
+  /* Không hiện khung màu khi hover hoặc đang chọn */
+  #navbar-content .nav-link:hover,
+  #navbar-content .nav-link:focus-visible,
+  #navbar-content .current-link {
+    background: transparent !important;
+  }
+
+  /* Gạch hồng dưới mục đang được chọn */
+ #navbar-content .current-link::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 30px;
+  height: 2px;
+
+  background-color: #ff9fa9;
+  border: none;
+  border-radius: 999px;
+
+  transform: translateX(-50%);
+}
+
+  /* Không tạo gạch dưới ở toàn bộ nav-item */
+  #navbar-content .nav-item::after {
+    display: none !important;
+  }
+
+  /* Light mode */
+  html[light-mode="light"] #navbar-content .nav-link,
+  html[light-mode="light"] #navbar-content .current-link {
+    color: #111111 !important;
+  }
+
+  html[light-mode="light"] #navbar-content .nav-link:hover {
+    color: #ff8292 !important;
+  }
+
+  /* Dark mode */
+  html[light-mode="dark"] #navbar-content .nav-link,
+  html[light-mode="dark"] #navbar-content .current-link {
+    color: #a6a6a6 !important;
+  }
+
+  html[light-mode="dark"] #navbar-content .nav-link:hover {
+    color: #ffffff !important;
+  }
+}

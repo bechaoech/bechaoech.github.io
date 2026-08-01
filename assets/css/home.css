@@ -630,3 +630,301 @@ a:hover {
 .socialicon.youtube:hover {
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
+/* =========================================
+   Refined social icons
+   ========================================= */
+
+/* Light mode */
+html[light-mode="light"] {
+  --social-bg: rgba(255, 255, 255, 0.78);
+  --social-border: rgba(15, 23, 42, 0.12);
+  --social-color: #475569;
+  --social-shadow: 0 10px 28px rgba(15, 23, 42, 0.1);
+  --social-hover-bg: #ffffff;
+}
+
+/* Dark mode */
+html[light-mode="dark"] {
+  --social-bg: rgba(24, 24, 27, 0.72);
+  --social-border: rgba(255, 255, 255, 0.14);
+  --social-color: #d4d4d8;
+  --social-shadow: 0 12px 32px rgba(0, 0, 0, 0.34);
+  --social-hover-bg: rgba(39, 39, 42, 0.96);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+a.socialicon,
+html[light-mode="dark"] a.socialicon {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  margin: 0;
+  border: 1px solid var(--social-border);
+  border-radius: 50%;
+
+  color: var(--social-color);
+  background: var(--social-bg);
+  box-shadow: var(--social-shadow);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 180ms ease,
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* Tắt hiệu ứng nền cũ */
+a.socialicon::after {
+  display: none;
+}
+
+a.socialicon i,
+a.socialicon:hover i {
+  margin: auto;
+  color: inherit;
+  font-size: 24px;
+
+  transition: transform 180ms ease;
+}
+
+a.socialicon:hover,
+a.socialicon:focus-visible {
+  background: var(--social-hover-bg);
+  border-color: currentColor;
+  transform: translateY(-4px);
+  outline: none;
+}
+
+a.socialicon:hover i,
+a.socialicon:focus-visible i {
+  transform: scale(1.08);
+}
+
+/* Facebook hover */
+a.socialicon.facebook:hover,
+a.socialicon.facebook:focus-visible {
+  color: #1877f2;
+  box-shadow: 0 12px 30px rgba(24, 119, 242, 0.22);
+}
+
+/* YouTube hover */
+a.socialicon.youtube:hover,
+a.socialicon.youtube:focus-visible {
+  color: #ff0033;
+  box-shadow: 0 12px 30px rgba(255, 0, 51, 0.2);
+}
+
+/* Instagram hover */
+a.socialicon.instagram:hover,
+a.socialicon.instagram:focus-visible {
+  color: #d9468f;
+  box-shadow: 0 12px 30px rgba(217, 70, 143, 0.22);
+}
+
+/* Mobile */
+@media (max-width: 430px) {
+  a.socialicon,
+  html[light-mode="dark"] a.socialicon {
+    width: 52px;
+    height: 52px;
+  }
+
+  a.socialicon i {
+    font-size: 22px;
+  }
+}
+/* Giữ màu thương hiệu và loại bỏ gạch chân */
+a.socialicon,
+a.socialicon:hover,
+a.socialicon:focus,
+a.socialicon:active,
+a.socialicon:visited {
+  text-decoration: none !important;
+}
+
+/* Facebook */
+a.socialicon.facebook,
+a.socialicon.facebook:hover,
+a.socialicon.facebook:focus-visible {
+  color: #1877f2;
+}
+
+a.socialicon.facebook i,
+a.socialicon.facebook:hover i {
+  color: #1877f2 !important;
+}
+
+/* YouTube */
+a.socialicon.youtube,
+a.socialicon.youtube:hover,
+a.socialicon.youtube:focus-visible {
+  color: #ff0000;
+}
+
+a.socialicon.youtube i,
+a.socialicon.youtube:hover i {
+  color: #ff0000 !important;
+}
+
+/* Instagram gradient */
+a.socialicon.instagram,
+a.socialicon.instagram:hover,
+a.socialicon.instagram:focus-visible {
+  color: #e1306c;
+}
+
+a.socialicon.instagram i,
+a.socialicon.instagram:hover i {
+  color: transparent !important;
+
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover: chỉ nâng và phóng nhẹ */
+a.socialicon:hover {
+  text-decoration: none !important;
+  transform: translateY(-4px);
+}
+
+a.socialicon:hover i {
+  transform: scale(1.08);
+}
+a.socialicon.youtube .youtube-logo {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: auto;
+
+  transition: transform 180ms ease;
+}
+
+a.socialicon.youtube:hover .youtube-logo,
+a.socialicon.youtube:focus-visible .youtube-logo {
+  transform: scale(1.08);
+}
+
+/* Không có gạch chân khi hover */
+a.socialicon.youtube,
+a.socialicon.youtube:hover,
+a.socialicon.youtube:focus {
+  text-decoration: none !important;
+}
+a.socialicon.facebook i {
+  font-size: 28px;
+}
+
+a.socialicon.youtube .youtube-logo {
+  width: 36px;
+  height: 36px;
+}
+a.socialicon.instagram i {
+    font-size: 30px;
+}
+/* =========================================
+   Unified subtle hover for social icons
+   ========================================= */
+
+.social-icons a.socialicon {
+  animation: none !important;
+
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 260ms ease,
+    background-color 260ms ease,
+    border-color 260ms ease !important;
+}
+
+/* Tắt hiệu ứng hình tròn trượt lên của CSS cũ */
+.social-icons a.socialicon::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hover chung cho cả light và dark mode */
+.social-icons a.socialicon:hover,
+.social-icons a.socialicon:focus-visible {
+  animation: none !important;
+  transform: translateY(-2px) !important;
+  background: var(--social-bg) !important;
+  border-color: var(--social-border) !important;
+  text-decoration: none !important;
+}
+
+/* Shadow nhẹ ở light mode */
+html[light-mode="light"] .social-icons a.socialicon:hover,
+html[light-mode="light"] .social-icons a.socialicon:focus-visible {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14) !important;
+}
+
+/* Shadow nhẹ tương ứng ở dark mode */
+html[light-mode="dark"] .social-icons a.socialicon:hover,
+html[light-mode="dark"] .social-icons a.socialicon:focus-visible {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.32) !important;
+}
+
+/* Hiệu ứng nhẹ cho logo bên trong */
+.social-icons a.socialicon i,
+.social-icons a.socialicon svg {
+  animation: none !important;
+
+  transition:
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.social-icons a.socialicon:hover i,
+.social-icons a.socialicon:hover svg,
+.social-icons a.socialicon:focus-visible i,
+.social-icons a.socialicon:focus-visible svg {
+  animation: none !important;
+  transform: scale(1.03) !important;
+}
+/* Màu glow riêng của từng thương hiệu */
+.socialicon.facebook {
+  --brand-border: rgba(24, 119, 242, 0.28);
+  --brand-shadow:
+    0 10px 24px rgba(24, 119, 242, 0.2),
+    0 0 16px rgba(24, 119, 242, 0.12);
+}
+
+.socialicon.youtube {
+  --brand-border: rgba(255, 0, 0, 0.26);
+  --brand-shadow:
+    0 10px 24px rgba(255, 0, 0, 0.18),
+    0 0 16px rgba(255, 0, 0, 0.11);
+}
+
+.socialicon.instagram {
+  --brand-border: rgba(214, 36, 159, 0.27);
+  --brand-shadow:
+    0 10px 24px rgba(214, 36, 159, 0.18),
+    0 0 14px rgba(131, 58, 180, 0.14);
+}
+
+/* Dùng cùng hiệu ứng cho cả light và dark mode */
+html[light-mode] .social-icons a.socialicon:hover,
+html[light-mode] .social-icons a.socialicon:focus-visible {
+  border-color: var(--brand-border) !important;
+  box-shadow: var(--brand-shadow) !important;
+}
