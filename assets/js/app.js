@@ -7,7 +7,7 @@ script.src="https://unpkg.com/sweetalert/dist/sweetalert.min.js";
 document.body.appendChild(script);
 
 {/* <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Research</a></li> */}
-  //  <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
+  //  <li class="nav-item nav-item-hover"><a class="nav-link" href="home-flavors.html">Education</a></li>
 
 // Header
 
@@ -27,9 +27,10 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">About Me</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Our Journey</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Home Flavors</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="about-me.html">About Me</a></li>
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="phd-journey.html">Our Journey</a></li>
+   <!-- <li class="nav-item nav-item-hover"><a class="nav-link" href="green-card-journey.html">Green Card</a></li> -->
+   <li class="nav-item nav-item-hover"><a class="nav-link" href="home-flavors.html">Home Flavors</a></li>
    <li class="nav-item theme-toggle-item">
    <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked>
    </li>
@@ -111,9 +112,9 @@ let header = $(`
 
 //"Scroll to top" button
 let upArrow = $(`
-  <button id="btnScrollToTop" onclick="scrollToTop()"><i class="fas fa-2x fa-angle-up"></i></button>
-  <link rel="stylesheet" type="text/css" href="./css/style.css" />
-  })
+  <button id="btnScrollToTop" onclick="scrollToTop()">
+    <i class="fas fa-2x fa-angle-up"></i>
+  </button>
 `);
 
 $(document).ready(function () {
@@ -154,7 +155,6 @@ const scrollToTop = () => {
 $(function () {
   let bodyElement = $(`body`);
   bodyElement.prepend(header);
-  bodyElement.append(footer);
   bodyElement.append(upArrow);
   $("#btnScrollToTop").css("visibility", "hidden");
 

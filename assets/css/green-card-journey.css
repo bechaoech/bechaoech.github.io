@@ -1,0 +1,75 @@
+.green-card-main {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+
+.green-card-hero {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.green-card-title {
+  color: var(--text);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.green-card-title span {
+  color: #ff9fa9;
+}
+
+.green-card-intro {
+  color: var(--text);
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.green-card-section {
+  padding: 60px 20px;
+}
+
+.green-card-content {
+  max-width: 850px;
+}
+
+.green-card-content h2 {
+  color: #ff9fa9;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.green-card-content p {
+  color: var(--text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+  .green-card-hero {
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .green-card-title {
+    font-size: 2.2rem;
+  }
+
+  .green-card-intro,
+  .green-card-content p {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .green-card-hero {
+    padding-top: 130px !important;
+  }
+}

@@ -126,22 +126,19 @@ const mentor = [
     title: "📖 Reading",
     subtitle: "Every book is a door to another world",
     image: "assets/images/experience-page/reading.png",
-    desp: "Each book is a door to another world — and sometimes, a door back to myself. I often read after finishing something that took a long time — as a way to rest and recover. In those moments, I feel like I have enough space, enough stillness to truly absorb each word and lose myself in it, slowly and fully.",
-    href: "https://ulhacks.com/",
+    desp: "Each book is a door to another world — and sometimes, a door back to myself. I often read after finishing something that took a long time — as a way to rest and recover. In those moments, I feel like I have enough space, enough stillness to truly absorb each word and lose myself in it, slowly and fully."
   },
   {
     title: " 📝 Lifelong Learning",
     subtitle: "Grateful for every new lesson",
     image: "assets/images/experience-page/lifelonglearning.png",
-    desp: "Life is a never-ending journey of learning. When we die, we can’t take our possessions with us — only the experiences we've lived and the lessons we've learned. I'm grateful that I still get to learn each day, whether it's a new language or just a small insight from everyday life.",
-    href: "https://wafflehacks.org/",
+    desp: "Life is a never-ending journey of learning. When we die, we can’t take our possessions with us — only the experiences we've lived and the lessons we've learned. I'm grateful that I still get to learn each day, whether it's a new language or just a small insight from everyday life."
   },
   {
     title: "🎬 Movies & Series",
     subtitle: "Living a thousand lives through stories",
     image: "assets/images/experience-page/movies.png",
-    desp: "I love films just as much as I love music. To truly feel a movie, I don’t just watch it with my eyes — I immerse myself in each character. Every scene holds dozens of intertwined stories, and through them, I get to live dozens of different lives.",
-    href: "https://elevatetech.codes/",
+    desp: "I love films just as much as I love music. To truly feel a movie, I don’t just watch it with my eyes — I immerse myself in each character. Every scene holds dozens of intertwined stories, and through them, I get to live dozens of different lives."
   },
   // {
   //   title: "PitchTeen",
@@ -235,7 +232,7 @@ const showCards3 = () => {
           <div class="blog-slider__title">${title}</div>
           <span class="blog-slider__code">${subtitle}</span>
           <div class="blog-slider__text">${desp}</div>
-          <a href="${href}" class="blog-slider__button">Read More</a>   
+          ${href ? `<a href="${href}" class="blog-slider__button" target="_blank" rel="noopener noreferrer">Read More</a>` : ""}
         </div>
       </div>
       `)
