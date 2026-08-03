@@ -1309,7 +1309,7 @@ gap: 0 !important;
     align-items: center !important;
     gap: 12px !important;
     width: 100%;
-    padding: 18px 18px 22px !important;
+    padding: 34px 18px 22px !important;
   }
 
   /* Các đoạn CSS của ô menu đang có giữ nguyên */
@@ -1381,3 +1381,13 @@ gap: 0 !important;
     content: none !important;
   }
   }
+  /* Không để navbar che nội dung trên điện thoại */
+@media screen and (max-width: 1100px) {
+  #navbar {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+  }
+}
