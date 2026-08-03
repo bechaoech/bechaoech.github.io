@@ -1280,33 +1280,53 @@ html[light-mode="light"] .hf-filter-btn.active {
     transform: translateX(-40px);
   }
 }
-/* Sắp xếp phần đầu Home Flavors trên điện thoại */
+/* Phần đầu Home Flavors trên điện thoại */
 @media screen and (max-width: 767px) {
-  body > .container.pt-5 {
-    padding-top: 20px !important;
+  .home-flavors-hero {
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 24px 15px 0 !important;
   }
 
-  body > .container.pt-5 > section:first-child {
+  .home-flavors-hero > section {
     height: auto !important;
     min-height: 0 !important;
   }
 
-  body > .container.pt-5 .container-fluid.pt-5 {
-    padding-top: 20px !important;
+  .home-flavors-hero .container-fluid.pt-5 {
+    padding-top: 0 !important;
   }
 
-  body > .container.pt-5 .row {
-    flex-direction: column-reverse !important;
+  .home-flavors-hero .row {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
   }
 
-  body > .container.pt-5 .dropdown1,
-  body > .container.pt-5 .dropdown2 {
+  /* Đưa tiêu đề và mô tả lên trước hình */
+  .home-flavors-hero .row > div:nth-child(2) {
+    order: 1;
+    padding: 0 12px !important;
+  }
+
+  .home-flavors-hero .dropdown1,
+  .home-flavors-hero .dropdown2 {
     position: static !important;
     padding: 0 !important;
   }
 
-  body > .container.pt-5 .godown {
+  /* Hình nằm dưới phần chữ */
+  .home-flavors-hero .godown {
+    order: 2;
     position: static !important;
-    padding-top: 20px !important;
+    padding: 24px 0 0 !important;
+  }
+
+  .home-flavors-hero .godown img {
+    display: block;
+    max-width: 82% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    transform: none !important;
   }
 }
