@@ -881,3 +881,21 @@ html[light-mode="light"] .volunteerCard {
     object-fit: cover;
   }
 }
+/* Giảm khoảng trống đầu trang About Me trên điện thoại */
+@media screen and (max-width: 767px) {
+  .main.pt-5 {
+    padding-top: 20px !important;
+  }
+
+  .main > section:first-child > .container-fluid {
+    padding-top: 20px !important;
+  }
+
+  .main > section:first-child .godown {
+    padding-top: 0 !important;
+  }
+
+  .main > section:first-child .dropdown {
+    margin-top: 20px !important;
+  }
+}

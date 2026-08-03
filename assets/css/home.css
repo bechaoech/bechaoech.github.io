@@ -928,3 +928,24 @@ html[light-mode] .social-icons a.socialicon:focus-visible {
   border-color: var(--brand-border) !important;
   box-shadow: var(--brand-shadow) !important;
 }
+/* Sửa vị trí nội dung Home trên điện thoại */
+@media screen and (max-width: 767px) {
+  #home + center {
+    position: relative;
+    width: 100%;
+    height: 0;
+  }
+
+  #home + center > .text {
+    position: absolute !important;
+    top: -50vh !important;
+    left: 50% !important;
+    width: 92% !important;
+    max-width: 680px;
+
+    margin-top: 0 !important;
+    transform: translate(-50%, -50%) !important;
+
+    z-index: 1;
+  }
+}

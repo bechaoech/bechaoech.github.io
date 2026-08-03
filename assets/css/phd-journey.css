@@ -1256,3 +1256,27 @@ html[light-mode="light"] .ucsd-color {
 .timeline-container .content h3 {
   text-align: left !important;
 }
+/* Giảm khoảng trống đầu trang Our Journey trên điện thoại */
+@media screen and (max-width: 767px) {
+  body > .container.pt-5 {
+    padding-top: 20px !important;
+  }
+
+  body > .container.pt-5 > section:first-child {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body > .container.pt-5 > section:first-child > section:first-child {
+    margin-top: 0 !important;
+  }
+
+  body > .container.pt-5 > section:first-child .px-3.pt-5 {
+    padding-top: 20px !important;
+  }
+
+  body > .container.pt-5 > section:first-child .dropdown {
+    position: static !important;
+    padding: 20px 16px 0 !important;
+  }
+}

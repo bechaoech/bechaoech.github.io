@@ -1280,3 +1280,33 @@ html[light-mode="light"] .hf-filter-btn.active {
     transform: translateX(-40px);
   }
 }
+/* Sắp xếp phần đầu Home Flavors trên điện thoại */
+@media screen and (max-width: 767px) {
+  body > .container.pt-5 {
+    padding-top: 20px !important;
+  }
+
+  body > .container.pt-5 > section:first-child {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  body > .container.pt-5 .container-fluid.pt-5 {
+    padding-top: 20px !important;
+  }
+
+  body > .container.pt-5 .row {
+    flex-direction: column-reverse !important;
+  }
+
+  body > .container.pt-5 .dropdown1,
+  body > .container.pt-5 .dropdown2 {
+    position: static !important;
+    padding: 0 !important;
+  }
+
+  body > .container.pt-5 .godown {
+    position: static !important;
+    padding-top: 20px !important;
+  }
+}
