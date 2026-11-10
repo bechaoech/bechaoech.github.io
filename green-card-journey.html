@@ -1,169 +1,778 @@
 <!DOCTYPE html>
-<html lang="en" light-mode="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#53658a">
+  <meta name="description" content="Our Green Card story is coming soon. A new chapter is on its way.">
+  <title>Green Card · Coming Soon | Be Chao Ech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
 
-  <title>Be Chao Ech | Our Green Card Journey</title>
+<link rel="icon" type="image/png" href="assets/stickers/frogs/favicon.png">
+<link rel="apple-touch-icon" href="assets/stickers/frogs/favicon.png">
 
-  <meta
-    name="description"
-    content="Our personal green card journey, including the preparation, filing timeline, waiting process, and lessons we learned along the way."
-  >
-  <meta name="robots" content="index,follow">
-
-  <meta property="og:title" content="Be Chao Ech | Our Green Card Journey">
-  <meta
-    property="og:description"
-    content="A personal journal about our green card journey and the lessons we learned throughout the process."
-  >
-  <meta property="og:url" content="https://bechaoech.github.io/green-card-journey.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Be Chao Ech">
-
-  <meta name="twitter:card" content="summary">
-
-  <link
-    rel="stylesheet"
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-  >
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap"
-    rel="stylesheet"
-  >
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  >
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-  >
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  >
-
-  <link rel="stylesheet" href="assets/css/preloader.css">
-  <link rel="stylesheet" href="assets/css/green-card-journey.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/cursor.css">
-
-  <link rel="icon" href="assets/images/ech.png" type="image/png">
-
-  <script defer src="assets/js/dynamicTitle.js"></script>
-
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-M11CMZ12Q"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
+<style id="bechaoech-site-styles">
+/* 01 — page-styles */
+:root {
+      --pink: #ffd0df;
+      --light: #fff5fb;
+      --muted: #eadbe9;
+      --serif: 'Lora', Georgia, serif;
+      --sans: 'Nunito', Arial, sans-serif;
     }
+    * { box-sizing: border-box; }
+    html { min-height: 100%; }
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      margin: 0;
+      overflow-x: hidden;
+      color: var(--light);
+      font-family: var(--sans);
+      background:
+        radial-gradient(ellipse at 80% 13%, #d8a1c462, transparent 48%),
+        radial-gradient(ellipse at 13% 90%, #6d95bb77, transparent 50%),
+        linear-gradient(145deg, #394f76 0%, #576487 48%, #917699 100%);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .56;
+      background-image:
+        radial-gradient(circle, #fff6fa 1px, transparent 1.6px),
+        radial-gradient(circle, #ffd0df 1.25px, transparent 2px);
+      background-size: 113px 131px, 197px 181px;
+      background-position: 15px 32px, 69px 81px;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 2px solid var(--pink); outline-offset: 5px; }
+    .wrap { position: relative; z-index: 1; width: min(1040px, calc(100% - 40px)); margin: auto; }
+    header {
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid #ffe5f038;
+    }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font: 500 21px var(--serif); }
+    .brand img { display: block; width: 43px; height: 43px; object-fit: contain; }
+    .brand-heart { color: var(--pink); font-size: 18px; }
+    .home-top { color: #ffe7ef; font-size: 13px; font-weight: 700; transition: color .25s, transform .25s; }
+    .home-top:hover { color: white; transform: translateX(-3px); }
+    main { min-height: calc(100dvh - 160px); display: grid; place-items: center; padding: 60px 0 76px; }
+    .not-found {
+      position: relative;
+      width: min(720px, 100%);
+      padding: clamp(32px, 6vw, 65px) clamp(22px, 7vw, 72px);
+      border: 1px solid #ffe7f076;
+      border-radius: 27px;
+      background: linear-gradient(135deg, #ffffff15, #fff0f507);
+      box-shadow: 0 20px 75px #24344b38, inset 0 1px #ffffff28;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+    .eyebrow { color: var(--pink); font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+    .frog-picture { width: 105px; height: 105px; margin: 19px auto 5px; }
+    .frog-picture img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 10px 15px #273a5236); }
+    .error-code { margin: 10px 0 0; font: 400 clamp(35px, 6vw, 66px)/1.2 var(--serif); letter-spacing: -2px; color: var(--pink); }
+    h1 { margin: 19px 0 16px; font: 400 clamp(25px, 4.4vw, 37px)/1.35 var(--serif); }
+    h1 em { color: var(--pink); font-weight: 400; }
+    p { margin: 0 auto; max-width: 480px; color: #f7e9f5; font-size: 15px; line-height: 1.9; }
+    .actions { display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap; margin-top: 31px; }
+    .primary-link, .secondary-link { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 47px; border-radius: 99px; padding: 11px 19px; font-size: 13px; font-weight: 700; transition: transform .27s, box-shadow .27s, background .27s, color .27s; }
+    .primary-link { color: #253953; background: #fac1d5; box-shadow: 0 7px 20px #1f304337; }
+    .secondary-link { color: #fff5fb; border: 1px solid #ffe4ef80; background: #ffffff0a; }
+    .primary-link:hover, .secondary-link:hover { transform: translateY(-3px); }
+    .primary-link:hover { background: #ffe0ec; box-shadow: 0 9px 25px #fac1d548; }
+    .secondary-link:hover { color: var(--pink); background: #ffffff14; }
+    .little-note { margin-top: 27px; font: italic 14px/1.6 var(--serif); color: var(--pink); }
+    .sparkle { position: absolute; color: var(--pink); text-shadow: 0 0 13px #ffe9f3b0; pointer-events: none; animation: twinkle 4s ease-in-out infinite; }
+    .sparkle.one { top: 45px; left: 10%; font-size: 26px; }
+    .sparkle.two { top: 76px; right: 12%; font-size: 19px; animation-delay: -1.8s; }
+    .sparkle.three { right: 8%; bottom: 63px; font-size: 24px; animation-delay: -2.6s; }
+    @keyframes twinkle { 0%, 100% { opacity: .35; transform: translateY(0) scale(.9); } 50% { opacity: 1; transform: translateY(-4px) scale(1.08); } }
+    footer { padding: 22px 0 28px; border-top: 1px solid #ffe5f026; text-align: center; color: #ead8eb; font-size: 11px; }
+    @media (max-width: 560px) {
+      header { min-height: 76px; }
+      .brand { font-size: 17px; }
+      .brand img { width: 36px; height: 36px; }
+      .home-top { font-size: 12px; }
+      main { padding: 34px 0 52px; }
+      .not-found { border-radius: 19px; }
+      .frog-picture { width: 88px; height: 88px; }
+      .error-code { letter-spacing: -4px; }
+      p { font-size: 14px; }
+      .sparkle.one { left: 5%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+</style>
 
-    gtag("js", new Date());
-    gtag("config", "G-M11CMZ12Q");
-  </script>
+<style id="be-common-effects">
+/* Stardust cursor */
+
+  #be-stardust-canvas {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    z-index: 2147483646 !important;
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    html.be-stardust-on,
+    html.be-stardust-on * { cursor: none !important; }
+    html.be-stardust-on input,
+    html.be-stardust-on textarea,
+    html.be-stardust-on select,
+    html.be-stardust-on [contenteditable="true"] { cursor: text !important; }
+  }
+
+
+/* Animated frog (original PNG) */
+
+
+.site-header .frog-mascot {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  vertical-align: middle;
+  overflow: visible;
+  transform-origin: 50% 56%;
+
+  --frog-lift: 0px;
+  --frog-zoom: 1;
+
+  transform:
+    translateY(var(--frog-lift))
+    scale(var(--frog-zoom));
+
+  transition:
+    transform 260ms cubic-bezier(.2,.85,.25,1.12),
+    filter 260ms ease;
+}
+
+.site-header .frog-mascot > .brand-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* overlay for eyes + blink */
+.site-header .frog-mascot .frog-face-ui {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+}
+
+
+.site-header .frog-mascot .frog-eye {
+  transition: transform 220ms cubic-bezier(.2,.75,.25,1);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.site-header .frog-mascot .frog-lid {
+  opacity: 0;
+}
+
+/* blink */
+.site-header .frog-mascot.is-blinking .frog-lid {
+  animation: beFrogBlink 240ms ease-in-out both;
+}
+
+/* wink */
+.site-header .frog-mascot.is-winking .frog-lid--right {
+  animation: beFrogBlink 390ms ease-in-out both;
+}
+
+@keyframes beFrogBlink {
+  0%, 100% {
+    opacity: 0;
+  }
+  34%, 66% {
+    opacity: 1;
+  }
+}
+
+/* tiny heart when click */
+.site-header .frog-mascot::after {
+  content: '♥';
+  position: absolute;
+  z-index: 3;
+  top: -4px;
+  right: -9px;
+
+  color: #ffd0df;
+  font: 15px/1 Georgia, serif;
+
+  text-shadow:
+    0 0 7px rgba(255,208,223,.55);
+
+  pointer-events: none;
+  opacity: 0;
+}
+
+.site-header .frog-mascot.is-celebrating::after {
+  animation: beFrogHeart 470ms ease-out both;
+}
+
+@keyframes beFrogHeart {
+  0% {
+    opacity: 0;
+    transform:
+      translateY(6px)
+      rotate(-13deg)
+      scale(.65);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translateY(-13px)
+      rotate(12deg)
+      scale(1.1);
+  }
+}
+
+/* hover = chỉ nhấc nhẹ, không lắc */
+.site-header .brand:is(:hover, :focus-visible) .frog-mascot {
+  --frog-zoom: 1.06;
+  --frog-lift: -2px;
+
+  filter:
+    drop-shadow(0 3px 7px rgba(255,208,223,.25));
+}
+
+@media (max-width: 650px) {
+  .site-header .frog-mascot {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header .frog-mascot,
+  .site-header .frog-mascot .frog-eye,
+  .site-header .frog-mascot .frog-lid,
+  .site-header .frog-mascot::after {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .site-header .frog-mascot .frog-lid {
+    opacity: 0 !important;
+  }
+}
+
+
+/* The compact 404 / Coming Soon header shares the same interactive logo. */
+.site-header .brand { flex-shrink: 0; }
+.site-header .brand > .frog-mascot { flex-shrink: 0; }
+
+</style>
 </head>
+<body>
+  <div class="wrap">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Be Chao Ech, Home">
+        <img class="brand-icon" src="assets/stickers/frogs/favicon.png" alt="" aria-hidden="true" width="42" height="42">
+        <span>Be Chao Ech</span><span class="brand-heart" aria-hidden="true">♥</span>
+      </a>
+      <a class="home-top" href="index.html">← Home</a>
+    </header>
 
-<body class="no-scroll-preload">
-
-  <div class="loader-container">
-    <div class="atom">
-      <div class="electron"></div>
-      <div class="electron-alpha"></div>
-      <div class="electron-omega"></div>
-    </div>
+    <main>
+      <section class="not-found" aria-labelledby="lost-heading">
+        <span class="sparkle one" aria-hidden="true">✧</span>
+        <span class="sparkle two" aria-hidden="true">✦</span>
+        <span class="sparkle three" aria-hidden="true">✧</span>
+        <div class="eyebrow">A new chapter is on its way</div>
+        <div class="frog-picture"><img src="assets/stickers/frogs/favicon.png" alt="A smiling green frog"></div>
+        <div class="error-code">Coming soon</div>
+        <h1 id="lost-heading">Our Green Card story is <em>growing.</em></h1>
+        <p>I'm still putting this chapter together, one little step at a time. Thank you for visiting — it'll be ready when the story is ready to share.</p>
+        <nav class="actions" aria-label="Find your way back">
+          <a class="primary-link" href="index.html">Back to Home <span aria-hidden="true">→</span></a>
+          <a class="secondary-link" href="home-flavors.html">Visit Home Flavors <span aria-hidden="true">✧</span></a>
+        </nav>
+        <div class="little-note">A little patience, a little heart. ♡</div>
+      </section>
+    </main>
+    <footer>Be Chao Ech · A little nighttime home</footer>
   </div>
 
-  <main class="green-card-main">
+<!-- Shared effects: star cursor and original frog logo -->
+<script id="be-stardust-script">
+(() => {
+  'use strict';
+  if (document.getElementById('be-stardust-canvas')) return;
+  if (!matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    <section class="green-card-hero">
-      <div class="container">
-        <h1
-          class="green-card-title animate__animated animate__fadeInUp"
-        >
-          Our <span>Green Card Journey</span>
-        </h1>
+  const SETTINGS = {
+    starSize: 9,       // Kích thước ngôi sao chính (9–12 là vừa)
+    softness: 0.18,     // Độ bo tròn 5 cánh (0.12–0.24)
+    glowSize: 23,      // Quầng sáng mỏng quanh sao
+    followSpeed: 0.42, // Độ mượt đi theo chuột (0.32–0.55)
+    trailSpacing: 7,  // Số lớn hơn = ít bụi sao hơn
+    maxParticles: 85,  // Giới hạn hạt để máy chạy mượt
+    clickStars: 15,     // Số hạt sao bung ra khi click
+    fallSpeed: 0.019   // Tốc độ rơi bụi sao
+  };
 
-        <p
-          class="green-card-intro animate__animated animate__fadeInUp"
-        >
-          This is where I document our journey—from the earliest
-          preparations and filing process to the long wait, important
-          milestones, and lessons we learned along the way.
-        </p>
-      </div>
-    </section>
+  const palette = ['#fff8fc', '#ffd0df', '#efdafa', '#dce7ff'];
+  const canvas = document.createElement('canvas');
+  canvas.id = 'be-stardust-canvas';
+  canvas.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(canvas);
+  const ctx = canvas.getContext('2d', { alpha: true });
+  if (!ctx) { canvas.remove(); return; }
 
-    <section class="green-card-section" data-aos="fade-up">
-      <div class="container green-card-content">
-        <h2>Why We Started</h2>
+  document.documentElement.classList.add('be-stardust-on');
 
-        <p>
-          Write the beginning of your green card journey here.
-        </p>
-      </div>
-    </section>
+  let w = 0, h = 0, dpr = 1;
+  let mx = 0, my = 0, sx = 0, sy = 0;
+  let lastTrailX = null, lastTrailY = null;
+  let visible = false, overLink = false, lastTime = 0;
+  const particles = [];
 
-    <section class="green-card-section" data-aos="fade-up">
-      <div class="container green-card-content">
-        <h2>Our Timeline</h2>
+  function resize() {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    w = innerWidth;
+    h = innerHeight;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  addEventListener('resize', resize, { passive: true });
 
-        <p>
-          Add important dates and milestones here.
-        </p>
-      </div>
-    </section>
+  // Ngôi sao 5 cánh thật, nhưng các đỉnh được bo nhẹ thay vì góc nhọn.
+  function starPath(cx, cy, outer, rotation = 0, roundness = SETTINGS.softness) {
+    const inner = outer * 0.49;
+    const pts = [];
+    for (let i = 0; i < 10; i++) {
+      const a = -Math.PI / 2 + rotation + i * Math.PI / 5;
+      const r = i % 2 ? inner : outer;
+      pts.push({ x: cx + Math.cos(a) * r, y: cy + Math.sin(a) * r });
+    }
+    ctx.beginPath();
+    for (let i = 0; i < 10; i++) {
+      const prev = pts[(i + 9) % 10];
+      const cur = pts[i];
+      const next = pts[(i + 1) % 10];
+      const t = i % 2 ? roundness * 0.42 : roundness;
+      const ax = cur.x + (prev.x - cur.x) * t;
+      const ay = cur.y + (prev.y - cur.y) * t;
+      const bx = cur.x + (next.x - cur.x) * t;
+      const by = cur.y + (next.y - cur.y) * t;
+      if (i === 0) ctx.moveTo(ax, ay);
+      else ctx.lineTo(ax, ay);
+      ctx.quadraticCurveTo(cur.x, cur.y, bx, by);
+    }
+    ctx.closePath();
+  }
 
-    <section class="green-card-section" data-aos="fade-up">
-      <div class="container green-card-content">
-        <h2>Preparation and Filing</h2>
+  function smallParticle(x, y, vx, vy, burst = false) {
+    if (particles.length >= SETTINGS.maxParticles) particles.shift();
+    const life = (burst ? 700 : 580) + Math.random() * 520;
+    particles.push({
+      x, y, vx, vy, life, maxLife: life,
+      size: (burst ? 1.8 : 1.0) + Math.random() * 1.8,
+      color: palette[Math.floor(Math.random() * palette.length)],
+      rotation: Math.random() * Math.PI,
+      spin: (Math.random() - .5) * .025,
+      isStar: Math.random() < (burst ? .58 : .32)
+    });
+  }
 
-        <p>
-          Write about how you prepared the documents and submitted the case.
-        </p>
-      </div>
-    </section>
+  function isTextInput(el) {
+    return el instanceof Element && !!el.closest('input,textarea,select,[contenteditable="true"]');
+  }
 
-    <section class="green-card-section" data-aos="fade-up">
-      <div class="container green-card-content">
-        <h2>The Waiting Process</h2>
+  document.addEventListener('pointermove', e => {
+    if (e.pointerType !== 'mouse') return;
+    mx = e.clientX;
+    my = e.clientY;
+    const wasVisible = visible;
+    visible = !isTextInput(e.target);
+    overLink = e.target instanceof Element &&
+      !!e.target.closest('a, button, [role="button"], summary, label');
+    if (!visible) { lastTrailX = null; return; }
+    if (!wasVisible) { sx = mx; sy = my; lastTrailX = mx; lastTrailY = my; }
 
-        <p>
-          Write about the waiting period, updates, and important moments.
-        </p>
-      </div>
-    </section>
+    const dx = mx - lastTrailX;
+    const dy = my - lastTrailY;
+    const dist = Math.hypot(dx, dy);
+    if (dist >= SETTINGS.trailSpacing) {
+      const steps = Math.min(4, Math.floor(dist / SETTINGS.trailSpacing));
+      for (let i = 1; i <= steps; i++) {
+        const x = lastTrailX + dx * (i / steps);
+        const y = lastTrailY + dy * (i / steps);
+        smallParticle(x + (Math.random() - .5) * 5,
+                      y + (Math.random() - .5) * 5,
+                      (Math.random() - .5) * .85 - dx / dist * .28,
+                      -.35 - Math.random() * .65);
+        if (Math.random() < .36) {
+          smallParticle(x, y, (Math.random() - .5) * .8, -.2 - Math.random() * .55);
+        }
+      }
+      lastTrailX = mx;
+      lastTrailY = my;
+    }
+  }, { passive: true });
 
-    <section class="green-card-section" data-aos="fade-up">
-      <div class="container green-card-content">
-        <h2>What We Learned</h2>
+  document.addEventListener('pointerdown', e => {
+    if (e.pointerType !== 'mouse' || isTextInput(e.target)) return;
+    for (let i = 0; i < SETTINGS.clickStars; i++) {
+      const a = (i / SETTINGS.clickStars) * Math.PI * 2 + Math.random() * .28;
+      const speed = .8 + Math.random() * 1.55;
+      smallParticle(e.clientX, e.clientY,
+                    Math.cos(a) * speed, Math.sin(a) * speed - .3, true);
+    }
+  }, { passive: true });
 
-        <p>
-          Share your personal lessons and reflections here.
-        </p>
-      </div>
-    </section>
+  document.addEventListener('pointerleave', () => {
+    visible = false;
+    lastTrailX = null;
+  });
+  window.addEventListener('blur', () => { visible = false; lastTrailX = null; });
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { visible = false; lastTrailX = null; }
+  });
 
-  </main>
+  function drawMainStar(time) {
+    const pulse = 1 + Math.sin(time / 410) * .035;
+    const radius = SETTINGS.starSize * (overLink ? 1.12 : 1) * pulse;
+    const rotation = Math.sin(time / 1100) * .055;
 
-  <div class="cursor-dot-outline"></div>
-  <div class="cursor-dot"></div>
+    // Ánh hào quang rất nhẹ, không tạo vòng đen hoặc chói gắt.
+    const halo = ctx.createRadialGradient(sx, sy, 0, sx, sy, SETTINGS.glowSize);
+    halo.addColorStop(0, 'rgba(255, 237, 247, .20)');
+    halo.addColorStop(.35, 'rgba(255, 208, 223, .09)');
+    halo.addColorStop(1, 'rgba(255, 208, 223, 0)');
+    ctx.fillStyle = halo;
+    ctx.beginPath();
+    ctx.arc(sx, sy, SETTINGS.glowSize, 0, Math.PI * 2);
+    ctx.fill();
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/cursor.js"></script>
+    const fill = ctx.createLinearGradient(sx-radius, sy-radius, sx+radius, sy+radius);
+    fill.addColorStop(0, '#fff9fd');
+    fill.addColorStop(.55, '#ffe5ee');
+    fill.addColorStop(1, '#ffd0df');
+    ctx.save();
+    starPath(sx, sy, radius, rotation);
+    ctx.fillStyle = fill;
+    ctx.shadowColor = 'rgba(255, 211, 229, .55)';
+    ctx.shadowBlur = 7;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+    ctx.strokeStyle = 'rgba(255, 255, 255, .55)';
+    ctx.lineWidth = .65;
+    ctx.stroke();
+    ctx.restore();
+  }
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  function render(time) {
+    const delta = lastTime ? Math.min(36, time - lastTime) : 16.7;
+    const step = delta / 16.7;
+    lastTime = time;
+    ctx.clearRect(0, 0, w, h);
 
-  <script>
-    AOS.init();
-  </script>
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.life -= delta;
+      if (p.life <= 0) { particles.splice(i, 1); continue; }
+      p.vy += SETTINGS.fallSpeed * step;
+      p.vx *= Math.pow(.987, step);
+      p.x += p.vx * step;
+      p.y += p.vy * step;
+      p.rotation += p.spin * step;
+      const fade = Math.pow(p.life / p.maxLife, 1.5);
+      ctx.save();
+      ctx.globalAlpha = fade * .76;
+      ctx.fillStyle = p.color;
+      if (p.isStar) {
+        starPath(p.x, p.y, p.size * 1.45, p.rotation, .13);
+      } else {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size * .55, 0, Math.PI * 2);
+      }
+      ctx.fill();
+      ctx.restore();
+    }
+
+    if (visible) {
+      const easing = 1 - Math.pow(1 - SETTINGS.followSpeed, step);
+      sx += (mx - sx) * easing;
+      sy += (my - sy) * easing;
+      drawMainStar(time);
+    }
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+})();
+</script>
+<script id="be-frog-mascot-script">
+(() => {
+  'use strict';
+
+  const brand = document.querySelector('.site-header a.brand');
+  const image = brand?.querySelector('img.brand-icon');
+
+  if (!brand || !image || image.closest('.frog-mascot')) return;
+
+  const frog = document.createElement('span');
+  frog.className = 'frog-mascot';
+  frog.setAttribute('aria-hidden', 'true');
+
+  image.before(frog);
+  frog.appendChild(image);
+
+  frog.insertAdjacentHTML('beforeend', `
+    <svg
+      class="frog-face-ui"
+      viewBox="0 0 650 650"
+      aria-hidden="true"
+      focusable="false"
+    >
+
+      
+<!-- COVER ORIGINAL BLACK EYES -->
+<defs>
+  <radialGradient id="frog-eye-cover">
+    <stop offset="0%" stop-color="#b1dc62"/>
+    <stop offset="76%" stop-color="#b1dc62"/>
+    <stop offset="100%" stop-color="#b1dc62"
+          stop-opacity="0"/>
+  </radialGradient>
+</defs>
+
+<!-- Fixed green background: never moves -->
+<g class="frog-eye-background">
+  <ellipse cx="176" cy="232"
+           rx="95" ry="100"
+           fill="url(#frog-eye-cover)"/>
+
+  <ellipse cx="471" cy="232"
+           rx="95" ry="100"
+           fill="url(#frog-eye-cover)"/>
+</g>
+
+<!-- Only black pupils move -->
+<g class="frog-eye frog-eye--left">
+  <ellipse cx="176" cy="232"
+           rx="58" ry="66"
+           fill="#2d3500"/>
+  <circle cx="199" cy="193"
+          r="19" fill="#fffdfd"/>
+  <circle cx="187" cy="246"
+          r="11" fill="#fffdfd"/>
+</g>
+
+<g class="frog-eye frog-eye--right">
+  <ellipse cx="471" cy="232"
+           rx="58" ry="66"
+           fill="#2d3500"/>
+  <circle cx="494" cy="193"
+          r="19" fill="#fffdfd"/>
+  <circle cx="482" cy="246"
+          r="11" fill="#fffdfd"/>
+</g>
+
+
+      <!-- EYELIDS -->
+      <g class="frog-lid frog-lid--left">
+        <ellipse
+          cx="176"
+          cy="232"
+          rx="84"
+          ry="88"
+          fill="#abd45d"
+        ></ellipse>
+        <path
+          d="M132 232 Q176 266 220 232"
+          fill="none"
+          stroke="#2c4b06"
+          stroke-width="10"
+          stroke-linecap="round"
+        ></path>
+      </g>
+
+      <g class="frog-lid frog-lid--right">
+        <ellipse
+          cx="471"
+          cy="232"
+          rx="84"
+          ry="88"
+          fill="#abd45d"
+        ></ellipse>
+        <path
+          d="M427 232 Q471 266 515 232"
+          fill="none"
+          stroke="#2c4b06"
+          stroke-width="10"
+          stroke-linecap="round"
+        ></path>
+      </g>
+
+    </svg>
+  `);
+
+  const leftEye = frog.querySelector('.frog-eye--left');
+  const rightEye = frog.querySelector('.frog-eye--right');
+
+  const canAnimate =
+    matchMedia('(hover: hover) and (pointer: fine)').matches &&
+    !matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!canAnimate) return;
+
+  let blinkTimer = 0;
+  let faceTimer = 0;
+  let raf = 0;
+  let pointerX = 0;
+  let pointerY = 0;
+
+  const EYES = [
+    { el: leftEye, x: 176, y: 232 },
+    { el: rightEye, x: 471, y: 232 }
+  ];
+
+  const MAX_EYE_MOVE = 20; /* subtle */
+
+  function clearFace() {
+    frog.classList.remove(
+      'is-blinking',
+      'is-winking',
+      'is-celebrating'
+    );
+  }
+
+  function blink() {
+    if (document.hidden || frog.classList.contains('is-winking')) return;
+
+    frog.classList.remove('is-blinking');
+    void frog.offsetWidth;
+    frog.classList.add('is-blinking');
+
+    clearTimeout(faceTimer);
+    faceTimer = setTimeout(() => {
+      frog.classList.remove('is-blinking');
+    }, 260);
+  }
+
+  function scheduleBlink() {
+    clearTimeout(blinkTimer);
+    blinkTimer = setTimeout(() => {
+      blink();
+      scheduleBlink();
+    }, 4200 + Math.random() * 3000);
+  }
+
+  function moveEyes() {
+    raf = 0;
+
+    const rect = frog.getBoundingClientRect();
+
+    const svgX = ((pointerX - rect.left) / rect.width) * 650;
+    const svgY = ((pointerY - rect.top) / rect.height) * 650;
+
+    EYES.forEach(eye => {
+      const dx = svgX - eye.x;
+      const dy = svgY - eye.y;
+
+      const dist = Math.hypot(dx, dy) || 1;
+      const limited = Math.min(MAX_EYE_MOVE, dist);
+
+      const tx = (dx / dist) * limited;
+      const ty = (dy / dist) * limited;
+
+      eye.el.setAttribute(
+        'transform',
+        `translate(${tx.toFixed(2)} ${ty.toFixed(2)})`
+      );
+    });
+  }
+
+  function queueMove(event) {
+    if (event.pointerType === 'touch') return;
+
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+
+    if (!raf) {
+      raf = requestAnimationFrame(moveEyes);
+    }
+  }
+
+  window.addEventListener('pointermove', queueMove, { passive: true });
+
+  brand.addEventListener('pointerenter', () => {
+    clearTimeout(faceTimer);
+    blink();
+  });
+
+  brand.addEventListener('click', event => {
+    if (
+      event.defaultPrevented ||
+      event.button !== 0 ||
+      event.metaKey ||
+      event.ctrlKey ||
+      event.shiftKey ||
+      event.altKey ||
+      brand.target === '_blank'
+    ) return;
+
+    const href = brand.getAttribute('href');
+    if (!href) return;
+
+    event.preventDefault();
+
+    clearTimeout(faceTimer);
+    clearFace();
+
+    void frog.offsetWidth;
+
+    frog.classList.add('is-winking', 'is-celebrating');
+
+    setTimeout(() => {
+      window.location.assign(brand.href);
+    }, 300);
+  });
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) {
+      scheduleBlink();
+    } else {
+      clearTimeout(blinkTimer);
+    }
+  });
+
+  scheduleBlink();
+})();
+</script>
 </body>
 </html>
